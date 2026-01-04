@@ -383,3 +383,12 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+.icone-titulo {
+    size: small;
+    opacity: 0.9;
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    margin-right: 10px;
+    color: #e9c915;
+}
