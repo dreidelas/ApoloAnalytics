@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apolo Análise de Dados - Consultoria Especializada</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Apolo</div>
+            <ul class="nav-links">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#precos">Preços</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Apolo Análise de Dados</h1>
+            <p>Transforme dados em decisões estratégicas para o seu negócio</p>
+            <button class="cta-button" onclick="scrollToContact()">
+                Entre em Contato
+            </button>
+        </div>
+    </section>
+
+    <section id="servicos">
+        <h2>Nossos Serviços</h2>
+        <div class="services">
+            <div class="service-card">
+                <h3>📊 Análise Exploratória</h3>
+                <p>Descubra padrões e insights ocultos nos seus dados através de análises estatísticas avançadas e visualizações intuitivas.</p>
+            </div>
+            <div class="service-card">
+                <h3>🎯 Business Intelligence</h3>
+                <p>Dashboards interativos e relatórios personalizados para monitorar KPIs e apoiar decisões estratégicas em tempo real.</p>
+            </div>
+            <div class="service-card">
+                <h3>🤖 Modelagem Preditiva</h3>
+                <p>Utilize machine learning para prever tendências, comportamentos e resultados futuros do seu negócio.</p>
+            </div>
+            <div class="service-card">
+                <h3>💡 Consultoria Estratégica</h3>
+                <p>Orientação especializada para implementar uma cultura data-driven na sua organização.</p>
+            </div>
+            <div class="service-card">
+                <h3>🔄 ETL e Integração</h3>
+                <p>Automatize processos de coleta, transformação e carregamento de dados de múltiplas fontes.</p>
+            </div>
+            <div class="service-card">
+                <h3>📈 Otimização de Processos</h3>
+                <p>Identifique gargalos e oportunidades de melhoria através da análise detalhada de processos.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="precos">
+        <h2>Nossos Planos</h2>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3>Básico</h3>
+                <div class="price">R$ 2.500<span>/mês</span></div>
+                <p class="description">Ideal para pequenas empresas que estão começando sua jornada em análise de dados.</p>
+                <ul class="features-list">
+                    <li>Análise exploratória mensal</li>
+                    <li>Dashboard básico com 5 KPIs</li>
+                    <li>Relatório mensal em PDF</li>
+                    <li>Suporte por e-mail</li>
+                    <li>1 reunião mensal</li>
+                </ul>
+                <a href="#contato" class="pricing-button">Contratar Plano</a>
+            </div>
+
+            <div class="pricing-card featured">
+                <span class="badge">Mais Popular</span>
+                <h3>Profissional</h3>
+                <div class="price">R$ 5.500<span>/mês</span></div>
+                <p class="description">Para empresas que buscam insights avançados e dashboards interativos completos.</p>
+                <ul class="features-list">
+                    <li>Tudo do plano Básico</li>
+                    <li>Dashboard interativo completo</li>
+                    <li>Análises preditivas mensais</li>
+                    <li>Integração com até 3 fontes de dados</li>
+                    <li>Suporte prioritário</li>
+                    <li>4 reuniões mensais</li>
+                </ul>
+                <a href="#contato" class="pricing-button">Contratar Plano</a>
+            </div>
+
+            <div class="pricing-card">
+                <h3>Empresarial</h3>
+                <div class="price">R$ 12.000<span>/mês</span></div>
+                <p class="description">Solução completa para grandes empresas com necessidades complexas de análise.</p>
+                <ul class="features-list">
+                    <li>Tudo do plano Profissional</li>
+                    <li>Múltiplos dashboards customizados</li>
+                    <li>Machine Learning avançado</li>
+                    <li>ETL automatizado ilimitado</li>
+                    <li>Consultoria estratégica dedicada</li>
+                    <li>Suporte 24/7</li>
+                    <li>Reuniões ilimitadas</li>
+                </ul>
+                <a href="#contato" class="pricing-button">Contratar Plano</a>
+            </div>
+
+            <div class="pricing-card custom-quote-card">
+                <h3>💼 Projeto Customizado</h3>
+                <p>Precisa de algo específico? Criamos soluções sob medida para atender às necessidades únicas do seu negócio.</p>
+                <a href="#contato" class="pricing-button">Solicitar Orçamento</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre">
+        <h2>Sobre Nós</h2>
+        <div class="about">
+            <p>A Apolo Análise de Dados é uma consultoria especializada em transformar dados brutos em inteligência de negócio acionável. Com uma equipe de especialistas em ciência de dados, estatística e business intelligence, ajudamos empresas de diversos setores a tomarem decisões mais assertivas baseadas em evidências.</p>
+            <p>Nossa missão é democratizar o acesso à análise de dados avançada, tornando-a acessível e compreensível para organizações de todos os tamanhos. Acreditamos que dados bem interpretados são o diferencial competitivo do século XXI.</p>
+            <p>Utilizamos as mais modernas ferramentas e metodologias do mercado, sempre com foco em entregar valor real e mensurável para nossos clientes.</p>
+        </div>
+    </section>
+
+    <section id="contato">
+        <h2>Entre em Contato</h2>
+        <form class="contact-form" id="contactForm">
+            <div class="form-group">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="empresa">Empresa</label>
+                <input type="text" id="empresa" name="empresa">
+            </div>
+            <div class="form-group">
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" name="mensagem" required></textarea>
+            </div>
+            <button type="submit" class="cta-button">Enviar Mensagem</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Apolo Análise de Dados. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

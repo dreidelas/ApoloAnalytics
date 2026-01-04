@@ -1,0 +1,194 @@
+<!DOCTYPE html> <!-- Declaração do tipo de documento HTML5 -->
+<html lang="pt-BR"> <!-- Tag raiz do HTML, idioma português do Brasil -->
+<head> <!-- Início da seção head (metadados e configurações) -->
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Torna o site responsivo em dispositivos móveis -->
+    <title>Apolo Análise de Dados - Consultoria Especializada</title> <!-- Título que aparece na aba do navegador -->
+    <link rel="stylesheet" href="style.css"> <!-- Link para o arquivo CSS externo -->
+</head> <!-- Fim da seção head -->
+<body> <!-- Início do corpo do documento (conteúdo visível) -->
+    
+    <!-- CABEÇALHO/NAVEGAÇÃO -->
+    <header> <!-- Tag semântica para o cabeçalho da página -->
+        <nav> <!-- Tag semântica para navegação -->
+            <div class="logo">Apolo</div> <!-- Div com a classe logo contendo o nome da empresa -->
+            <ul class="nav-links"> <!-- Lista não ordenada para os links de navegação -->
+                <li><a href="#home">Início</a></li> <!-- Item de lista com link âncora para seção home -->
+                <li><a href="#servicos">Serviços</a></li> <!-- Link âncora para seção servicos -->
+                <li><a href="#sobre">Sobre</a></li> <!-- Link âncora para seção sobre -->
+                <li><a href="#precos">Preços</a></li> <!-- Link âncora para seção preços -->
+                <li><a href="#contato">Contato</a></li> <!-- Link âncora para seção contato -->
+            </ul> <!-- Fim da lista de navegação -->
+        </nav> <!-- Fim da navegação -->
+    </header> <!-- Fim do cabeçalho -->
+
+    <!-- SEÇÃO HERO (PRIMEIRA TELA) -->
+    <section id="home" class="hero"> <!-- Seção principal com id="home" e classe "hero" -->
+        <div class="hero-content"> <!-- Container do conteúdo centralizado -->
+            <h1>Apolo Análise de Dados</h1> <!-- Título principal (heading 1) -->
+            <p>Transforme dados em decisões estratégicas para o seu negócio</p> <!-- Parágrafo com subtítulo -->
+            <button class="cta-button" onclick="scrollToContact()"> <!-- Botão de call-to-action que executa função JS ao clicar -->
+                Entre em Contato <!-- Texto do botão -->
+            </button> <!-- Fim do botão -->
+        </div> <!-- Fim do container hero-content -->
+    </section> <!-- Fim da seção hero -->
+
+    <!-- SEÇÃO DE SERVIÇOS -->
+    <section id="servicos"> <!-- Seção com id="servicos" para navegação -->
+        <h2>Nossos Serviços</h2> <!-- Título da seção (heading 2) -->
+        <div class="services"> <!-- Container grid para os cards de serviços -->
+            
+            <!-- CARD DE SERVIÇO 1 -->
+            <div class="service-card"> <!-- Div com classe service-card (primeiro card) -->
+                <h3>📊 Análise Exploratória</h3> <!-- Título do serviço (heading 3) com emoji -->
+                <p>Descubra padrões e insights ocultos nos seus dados através de análises estatísticas avançadas e visualizações intuitivas.</p> <!-- Descrição do serviço -->
+            </div> <!-- Fim do card 1 -->
+            
+            <!-- CARD DE SERVIÇO 2 -->
+            <div class="service-card"> <!-- Segundo card de serviço -->
+                <h3>🎯 Business Intelligence</h3> <!-- Título do serviço -->
+                <p>Dashboards interativos e relatórios personalizados para monitorar KPIs e apoiar decisões estratégicas em tempo real.</p> <!-- Descrição -->
+            </div> <!-- Fim do card 2 -->
+            
+            <!-- CARD DE SERVIÇO 3 -->
+            <div class="service-card"> <!-- Terceiro card de serviço -->
+                <h3>🤖 Modelagem Preditiva</h3> <!-- Título -->
+                <p>Utilize machine learning para prever tendências, comportamentos e resultados futuros do seu negócio.</p> <!-- Descrição -->
+            </div> <!-- Fim do card 3 -->
+            
+            <!-- CARD DE SERVIÇO 4 -->
+            <div class="service-card"> <!-- Quarto card de serviço -->
+                <h3>💡 Consultoria Estratégica</h3> <!-- Título -->
+                <p>Orientação especializada para implementar uma cultura data-driven na sua organização.</p> <!-- Descrição -->
+            </div> <!-- Fim do card 4 -->
+            
+            <!-- CARD DE SERVIÇO 5 -->
+            <div class="service-card"> <!-- Quinto card de serviço -->
+                <h3>🔄 ETL e Integração</h3> <!-- Título -->
+                <p>Automatize processos de coleta, transformação e carregamento de dados de múltiplas fontes.</p> <!-- Descrição -->
+            </div> <!-- Fim do card 5 -->
+            
+            <!-- CARD DE SERVIÇO 6 -->
+            <div class="service-card"> <!-- Sexto card de serviço -->
+                <h3>📈 Otimização de Processos</h3> <!-- Título -->
+                <p>Identifique gargalos e oportunidades de melhoria através da análise detalhada de processos.</p> <!-- Descrição -->
+            </div> <!-- Fim do card 6 -->
+            
+        </div> <!-- Fim do container services -->
+    </section> <!-- Fim da seção de serviços -->
+    
+    <!-- SEÇÃO DE PREÇOS -->
+    <section id="precos"> <!-- Seção com id="precos" para navegação -->
+        <h2>Nossos Planos</h2> <!-- Título da seção (heading 2) -->
+        <div class="pricing-grid"> <!-- Container grid para os cards de preços -->
+            
+            <!-- PLANO BÁSICO -->
+            <div class="pricing-card"> <!-- Div com classe pricing-card (primeiro plano) -->
+                <h3>Básico</h3> <!-- Título do plano (heading 3) -->
+                <div class="price">R$ 2.500<span>/mês</span></div> <!-- Preço do plano com formatação -->
+                <p class="description">Ideal para pequenas empresas que estão começando sua jornada em análise de dados.</p> <!-- Descrição do plano -->
+                <ul class="features-list"> <!-- Lista de recursos do plano -->
+                    <li>Análise exploratória mensal</li> <!-- Recurso 1 -->
+                    <li>Dashboard básico com 5 KPIs</li> <!-- Recurso 2 -->
+                    <li>Relatório mensal em PDF</li> <!-- Recurso 3 -->
+                    <li>Suporte por e-mail</li> <!-- Recurso 4 -->
+                    <li>1 reunião mensal</li> <!-- Recurso 5 -->
+                </ul> <!-- Fim da lista de recursos -->
+                <a href="#contato" class="pricing-button">Contratar Plano</a> <!-- Botão para contratar -->
+            </div> <!-- Fim do plano básico -->
+
+            <!-- PLANO PROFISSIONAL (DESTAQUE) -->
+            <div class="pricing-card featured"> <!-- Div com classes pricing-card e featured (plano em destaque) -->
+                <span class="badge">Mais Popular</span> <!-- Badge de destaque -->
+                <h3>Profissional</h3> <!-- Título do plano -->
+                <div class="price">R$ 5.500<span>/mês</span></div> <!-- Preço do plano -->
+                <p class="description">Para empresas que buscam insights avançados e dashboards interativos completos.</p> <!-- Descrição -->
+                <ul class="features-list"> <!-- Lista de recursos -->
+                    <li>Tudo do plano Básico</li> <!-- Recurso 1 -->
+                    <li>Dashboard interativo completo</li> <!-- Recurso 2 -->
+                    <li>Análises preditivas mensais</li> <!-- Recurso 3 -->
+                    <li>Integração com até 3 fontes de dados</li> <!-- Recurso 4 -->
+                    <li>Suporte prioritário</li> <!-- Recurso 5 -->
+                    <li>4 reuniões mensais</li> <!-- Recurso 6 -->
+                </ul> <!-- Fim da lista -->
+                <a href="#contato" class="pricing-button">Contratar Plano</a> <!-- Botão para contratar -->
+            </div> <!-- Fim do plano profissional -->
+
+            <!-- PLANO EMPRESARIAL -->
+            <div class="pricing-card"> <!-- Terceiro card de preço -->
+                <h3>Empresarial</h3> <!-- Título do plano -->
+                <div class="price">R$ 12.000<span>/mês</span></div> <!-- Preço -->
+                <p class="description">Solução completa para grandes empresas com necessidades complexas de análise.</p> <!-- Descrição -->
+                <ul class="features-list"> <!-- Lista de recursos -->
+                    <li>Tudo do plano Profissional</li> <!-- Recurso 1 -->
+                    <li>Múltiplos dashboards customizados</li> <!-- Recurso 2 -->
+                    <li>Machine Learning avançado</li> <!-- Recurso 3 -->
+                    <li>ETL automatizado ilimitado</li> <!-- Recurso 4 -->
+                    <li>Consultoria estratégica dedicada</li> <!-- Recurso 5 -->
+                    <li>Suporte 24/7</li> <!-- Recurso 6 -->
+                    <li>Reuniões ilimitadas</li> <!-- Recurso 7 -->
+                </ul> <!-- Fim da lista -->
+                <a href="#contato" class="pricing-button">Contratar Plano</a> <!-- Botão para contratar -->
+            </div> <!-- Fim do plano empresarial -->
+
+            <!-- CARD DE ORÇAMENTO CUSTOMIZADO -->
+            <div class="pricing-card custom-quote-card"> <!-- Card especial para orçamento customizado -->
+                <h3>💼 Projeto Customizado</h3> <!-- Título com emoji -->
+                <p>Precisa de algo específico? Criamos soluções sob medida para atender às necessidades únicas do seu negócio.</p> <!-- Descrição -->
+                <a href="#contato" class="pricing-button">Solicitar Orçamento</a> <!-- Botão para solicitar orçamento -->
+            </div> <!-- Fim do card de orçamento customizado -->
+            
+        </div> <!-- Fim do container pricing-grid -->
+    </section> <!-- Fim da seção de preços -->
+
+    <!-- SEÇÃO SOBRE NÓS -->
+    <section id="sobre"> <!-- Seção com id="sobre" -->
+        <h2>Sobre Nós</h2> <!-- Título da seção -->
+        <div class="about"> <!-- Container com classe about para estilização -->
+            <p>A Apolo Análise de Dados é uma consultoria especializada em transformar dados brutos em inteligência de negócio acionável. Com uma equipe de especialistas em ciência de dados, estatística e business intelligence, ajudamos empresas de diversos setores a tomarem decisões mais assertivas baseadas em evidências.</p> <!-- Primeiro parágrafo sobre a empresa -->
+            <p>Nossa missão é democratizar o acesso à análise de dados avançada, tornando-a acessível e compreensível para organizações de todos os tamanhos. Acreditamos que dados bem interpretados são o diferencial competitivo do século XXI.</p> <!-- Segundo parágrafo -->
+            <p>Utilizamos as mais modernas ferramentas e metodologias do mercado, sempre com foco em entregar valor real e mensurável para nossos clientes.</p> <!-- Terceiro parágrafo -->
+        </div> <!-- Fim do container about -->
+    </section> <!-- Fim da seção sobre -->
+
+    <!-- SEÇÃO DE CONTATO -->
+    <section id="contato"> <!-- Seção com id="contato" -->
+        <h2>Entre em Contato</h2> <!-- Título da seção -->
+        <form class="contact-form" id="contactForm"> <!-- Formulário com classe e id para estilização e JS -->
+            
+            <!-- CAMPO NOME -->
+            <div class="form-group"> <!-- Container do campo -->
+                <label for="nome">Nome</label> <!-- Rótulo do campo associado ao input -->
+                <input type="text" id="nome" name="nome" required> <!-- Campo de texto obrigatório -->
+            </div> <!-- Fim do container -->
+            
+            <!-- CAMPO E-MAIL -->
+            <div class="form-group"> <!-- Container do campo -->
+                <label for="email">E-mail</label> <!-- Rótulo -->
+                <input type="email" id="email" name="email" required> <!-- Campo de email com validação automática, obrigatório -->
+            </div> <!-- Fim do container -->
+            
+            <!-- CAMPO EMPRESA -->
+            <div class="form-group"> <!-- Container do campo -->
+                <label for="empresa">Empresa</label> <!-- Rótulo -->
+                <input type="text" id="empresa" name="empresa"> <!-- Campo de texto opcional -->
+            </div> <!-- Fim do container -->
+            
+            <!-- CAMPO MENSAGEM -->
+            <div class="form-group"> <!-- Container do campo -->
+                <label for="mensagem">Mensagem</label> <!-- Rótulo -->
+                <textarea id="mensagem" name="mensagem" required></textarea> <!-- Campo de texto multilinha obrigatório -->
+            </div> <!-- Fim do container -->
+            
+            <button type="submit" class="cta-button">Enviar Mensagem</button> <!-- Botão de envio do formulário -->
+        </form> <!-- Fim do formulário -->
+    </section> <!-- Fim da seção de contato -->
+
+    <!-- RODAPÉ -->
+    <footer> <!-- Tag semântica para rodapé -->
+        <p>&copy; 2026 Apolo Análise de Dados. Todos os direitos reservados.</p> <!-- Parágrafo com copyright -->
+    </footer> <!-- Fim do rodapé -->
+
+    <script src="script.js"></script> <!-- Link para arquivo JavaScript externo (carregado no final para melhor performance) -->
+</body> <!-- Fim do corpo -->
+</html> <!-- Fim do documento HTML -->
