@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apolo Análise de Dados - Consultoria Especializada</title>
@@ -126,29 +127,34 @@
         </div>
     </section>
 
+    <!-- CONTATO -->
     <section id="contato">
-        <h2>Entre em Contato</h2>
-        <form class="contact-form" id="contactForm">
-            <div class="form-group">
-                <label for="nome">Nome</label>
-                <input type="text" id="nome" name="nome" required>
-            </div>
-            <div class="form-group">
-                <label for="email">E-mail</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="empresa">Empresa</label>
-                <input type="text" id="empresa" name="empresa">
-            </div>
-            <div class="form-group">
-                <label for="mensagem">Mensagem</label>
-                <textarea id="mensagem" name="mensagem" required></textarea>
-            </div>
-            <button type="submit" class="cta-button">Enviar Mensagem</button>
-        </form>
+      <h2>Entre em Contato</h2>
+      <form
+        action="https://script.google.com/macros/s/AKfycbympDInhl0nwYj3VkwR92gF8PuWq6nOq5RtwnSDaz0F1qA26Fbr9soEyx3VJDfhqC_X/exec"
+        method="POST"
+      >
+        <div class="form-group">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" required />
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="empresa">Empresa</label>
+          <input type="text" id="empresa" name="empresa" />
+        </div>
+        <div class="form-group">
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" required></textarea>
+        </div>
+        <button type="submit" class="cta-button">
+          Enviar Mensagem
+        </button>
+      </form>
     </section>
-
     <footer>
         <p>&copy; 2026 Apolo Análise de Dados. Todos os direitos reservados.</p>
     </footer>
