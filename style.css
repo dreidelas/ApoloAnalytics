@@ -120,9 +120,15 @@ nav {
 }
 
 section {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 5rem 2rem;
+    width: 100%;       /* Ocupa toda a largura da tela */
+    padding: 100px 0;  /* Espaçamento vertical generoso */
+    margin: 0;         /* Remove margens externas */
+}
+
+.container {
+    max-width: 1200px; /* Limita a largura do conteúdo */
+    margin: 0 auto;    /* Centraliza o conteúdo no meio da tela */
+    padding: 0 2rem;   /* Evita que o texto encoste nas bordas em celulares */
 }
 
 h2 {
