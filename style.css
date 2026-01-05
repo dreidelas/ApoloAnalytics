@@ -429,6 +429,7 @@ textarea {
     opacity: 0;
     transition: opacity 0.3s;
     pointer-events: none;
+    font-size: 0.85rem;
 }
 
 .whatsapp-float:hover::before {
