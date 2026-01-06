@@ -30,6 +30,8 @@ body {
     background-color: var(--cor-primaria);
     color: var(--cor-secundaria);
     line-height: 1.6;
+
+    padding-top: 120px;
 }
 
 /* ========== HEADER E NAVEGAÇÃO ========== */
@@ -79,6 +81,7 @@ nav {
 /* ========== SEÇÃO HERO ========== */
 .hero {
     min-height: 100vh;
+    padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -88,10 +91,19 @@ nav {
         var(--gradiente-primario),
         url('Apolov2.png');
 
-    background-size: cover, 40%;
-    background-position: center, center;
-    background-repeat: no-repeat;
+    background-size:
+        cover,
+        40%;
+
+    background-position:
+        center,
+        center;
+
+    background-repeat:
+        no-repeat,
+        no-repeat;
 }
+
 
 .hero-content {
     width: 100%;
@@ -138,7 +150,7 @@ nav {
 }
 
 /* ========== CONTAINERS DE SEÇÕES ========== */
-section {
+section:not(.hero) {
     width: 100%;
     padding: 100px 0;
     margin: 0;
