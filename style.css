@@ -17,6 +17,8 @@
         rgba(44, 63, 77, 0.85),
         rgba(1, 2, 4, 0.90)
     );
+    /* Fontes */
+    --fonte-principal: 'Montserrat', sans-serif;
 }
 
 * {
