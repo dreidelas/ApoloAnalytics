@@ -75,7 +75,7 @@ nav {
     padding: 0;
     background: linear-gradient(rgba(44, 63, 77, 0.85), rgba(44, 63, 77, 0.85)), 
                 url('Apolov2.png');
-    background-size: auto;
+    background-size: 28%;
     background-position: center;
     background-repeat: no-repeat;
 }
