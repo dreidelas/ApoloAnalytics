@@ -17,9 +17,13 @@
         rgba(0, 0, 0, 0.90), 
         rgba(44, 63, 77, 0.95)
     );
+    
     /* Fontes */
     --fonte-principal: 'Montserrat', sans-serif;
     --fonte-secundária: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+
+    /* Dimensões */
+    --altura-header: 4.5rem;
 }
 
 * {
@@ -33,7 +37,7 @@ body {
     background-color: var(--cor-primaria);
     color: var(--cor-secundaria);
     line-height: 1.6;
-    padding-top: 120px;
+    padding-top: var(--altura-header);
 }
 
 /* ========== HEADER E NAVEGAÇÃO ========== */
@@ -47,6 +51,7 @@ header {
     padding: 1.5rem 0;
     position: fixed;
     width: 100%;
+    height: var(--altura-header);
     top: 0;
     z-index: 1000;
     backdrop-filter: blur(10px);
@@ -215,7 +220,7 @@ section:not(.hero) {
 }
 
 #precos {
-    background-color: #D6E1FF; /* Tom intermediário */
+    background-color: rgba(123, 165, 145, 0.2); /* Tom intermediário */
 }
 
 #precos h2 {
@@ -583,7 +588,7 @@ footer {
 }
 /* ========== SEÇÃO DEPOIMENTOS ========== */
 #depoimentos {
-    background-color: #D6E1FF;
+    background-color: rgba(123, 165, 145, 0.2);
 }
 
 #depoimentos h2 {
