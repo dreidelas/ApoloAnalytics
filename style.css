@@ -215,7 +215,7 @@ section:not(.hero) {
 }
 
 #precos {
-    background-color: #d4ddd8; /* Tom intermediário */
+    background-color: #D6E1FF; /* Tom intermediário */
 }
 
 #precos h2 {
@@ -454,7 +454,7 @@ textarea {
     height: 60px;
     bottom: 30px;
     right: 30px;
-    background-color: #25d366;
+    background-color: #01afff;
     color: #FFF;
     border-radius: 50px;
     text-align: center;
@@ -583,7 +583,7 @@ footer {
 }
 /* ========== SEÇÃO DEPOIMENTOS ========== */
 #depoimentos {
-    background-color: #d4ddd8;
+    background-color: #D6E1FF;
 }
 
 #depoimentos h2 {
