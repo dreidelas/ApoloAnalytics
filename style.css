@@ -220,7 +220,7 @@ section:not(.hero) {
 }
 
 #precos {
-    background-color: rgba(123, 165, 145, 0.2); /* Tom intermediário */
+    background-color: var(--cor-secundaria);
 }
 
 #precos h2 {
@@ -588,7 +588,7 @@ footer {
 }
 /* ========== SEÇÃO DEPOIMENTOS ========== */
 #depoimentos {
-    background-color: rgba(123, 165, 145, 0.2);
+    background-color: var(--cor-secundaria);
 }
 
 #depoimentos h2 {
