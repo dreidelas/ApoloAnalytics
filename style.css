@@ -39,8 +39,11 @@ body {
 /* ========== HEADER E NAVEGAÇÃO ========== */
 header {
     font-family: var(--fonte-principal);
-    font-weight: 300; /* leve */
+    font-weight: 400; /* leve */
+    font-size: 1,05rem;
     background-color: rgba(9, 13, 15, 0.95);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
     padding: 1.5rem 0;
     position: fixed;
     width: 100%;
