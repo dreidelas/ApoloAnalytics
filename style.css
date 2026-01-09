@@ -6,7 +6,7 @@
     --cor-secundaria: #eaf1f1;
     --cor-destaque: #5a7a8f;
     --cor-acento: #01afff;
-    --cor-intermediario: #2c3f4d; /* ← bloco nossa proposta */
+    --cor-intermediario: #2c3f4d;
 
     /* Texto */
     --cor-texto-claro: #ebf1ea;
@@ -722,7 +722,7 @@ footer {
     font-weight: bold;
     color: var(--cor-primaria);
 }
-/*ajuste de responsividade para mobile e pc
+/* ajuste de responsividade para mobile e pc */
 /* ========== CORREÇÕES PARA RESPONSIVIDADE MOBILE ========== */
 /* Adicione estas regras no final do seu arquivo style.css */
 
