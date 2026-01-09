@@ -545,7 +545,7 @@ footer {
 
     /* ========== HERO ========== */
     .hero {
-        min-height: 80vh;
+        height: 100vh;
         background-size: cover, 60%; /* Aumenta o tamanho do logo em mobile */
     }
 
@@ -574,7 +574,7 @@ footer {
     }
 
     section:not(.hero) {
-        padding: 60px 0;
+        padding: 0px 0;
     }
 
     /* ========== TÍTULOS ========== */
