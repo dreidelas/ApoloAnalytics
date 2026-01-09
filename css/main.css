@@ -1,7 +1,8 @@
 /* main.css — ordem lógica de carregamento */
-@import "css/reset.css";
-@import "css/variables.css";
-@import "css/base.css";
-@import "css/layout.css";
-@import "css/header.css";
-@import "css/components.css";
+@import "reset.css";
+@import "variables.css";
+@import "base.css";
+@import "layout.css";
+@import "header.css";
+@import "components.css";
+
