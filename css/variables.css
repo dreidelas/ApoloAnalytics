@@ -16,7 +16,7 @@
   --gradiente-primario: linear-gradient(
         135deg,
         rgba(0, 0, 0, 0.90), 
-        rgba(44, 63, 77, 0.95)
+        rgba(8, 55, 88, 0.95)
     );
     
     /* Fontes */
@@ -27,3 +27,4 @@
     --altura-header: 4rem;
 }
 /* #endregion */
+
