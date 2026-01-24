@@ -46,17 +46,22 @@ navLinksAnchor.forEach((anchor) => {
     });
 });
 
-// ========== FORMULÁRIO DE CONTATO ==========
-document.addEventListener('DOMContentLoaded', function () {
-    const formulario = document.getElementById('meu-formulario');
-    const btnEnviar = document.getElementById('btn-enviar');
-    const msgSucesso = document.getElementById('mensagem-sucesso');
+document.addEventListener('DOMContentLoaded', () => {
+    const formularios = document.querySelectorAll('.google-form');
 
-    if (formulario) {
-        formulario.addEventListener('submit', function (e) {
+    if (formularios.length === 0) return;
+
+    formularios.forEach((formulario) => {
+        formulario.addEventListener('submit', (e) => {
             e.preventDefault();
-            btnEnviar.innerText = 'Enviando...';
-            btnEnviar.disabled = true;
+
+            const btnEnviar = formulario.querySelector('button[type="submit"]');
+            const msgSucesso = formulario.querySelector('.mensagem-sucesso');
+
+            if (btnEnviar) {
+                btnEnviar.innerText = 'Enviando...';
+                btnEnviar.disabled = true;
+            }
 
             const dados = new FormData(formulario);
 
@@ -67,13 +72,15 @@ document.addEventListener('DOMContentLoaded', function () {
             })
                 .then(() => {
                     formulario.style.display = 'none';
-                    msgSucesso.style.display = 'block';
+                    if (msgSucesso) msgSucesso.style.display = 'block';
                 })
                 .catch((error) => {
                     console.error('Erro!', error.message);
-                    btnEnviar.innerText = 'Erro ao enviar. Tente novamente.';
-                    btnEnviar.disabled = false;
+                    if (btnEnviar) {
+                        btnEnviar.innerText = 'Erro ao enviar';
+                        btnEnviar.disabled = false;
+                    }
                 });
         });
-    }
+    });
 });
