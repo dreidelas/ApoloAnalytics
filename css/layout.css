@@ -1,4 +1,4 @@
-/* #region ========== CONTAINERS DE SEÇÕES ========== */
+/* #region ========== CONTAINERS DE SEÃ‡Ã•ES ========== */
 section:not(.hero) {
     width: 100%;
     padding: 80px 0;
@@ -11,12 +11,34 @@ section:not(.hero) {
     padding: 4rem;
 }
 
-/* Definição de Cores de Fundo */
-#proposta { background-color: var(--cor-intermediario); } 
-#servicos { background-color: #f5fdff; }
-#precos   { background-color: var(--cor-secundaria); }
-#sobre    { background-color: var(--cor-primaria); }
-#contato  { background-color: #1e2d38; }
+/* DefiniÃ§Ã£o de Cores de Fundo usando variÃ¡veis */
+#proposta { 
+    background: var(--bg-proposta) !important;
+} 
+
+#servicos { 
+    background-color: var(--bg-servicos) !important;
+}
+
+#dashboard {
+    background-color: var(--bg-dashboard) !important;
+}
+
+#precos {
+    background-color: var(--bg-precos) !important;
+}
+
+#sobre {
+    background-color: var(--bg-sobre) !important;
+}
+
+#depoimentos {
+    background: var(--bg-depoimentos) !important;
+}
+
+#contato {
+    background-color: var(--bg-contato) !important;
+}
 
 /* Cores de Texto (Agrupadas por similaridade) */
 #servicos h2,
@@ -26,7 +48,7 @@ section:not(.hero) {
 }
 
 #servicos .service-card p {
-    color: #3a4f5e;
+    color: rgba(58, 79, 94, 1); /* #3a4f5e */
 }
 /* #endregion */
 
