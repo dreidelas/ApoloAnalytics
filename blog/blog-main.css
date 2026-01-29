@@ -93,7 +93,7 @@ header {
 
 /* HERO BLOG */
 .blog-hero {
-    background: linear-gradient(135deg, #1a2a35 0%, #2c3f4d 50%, #01afff 100%);
+    background: linear-gradient(135deg, #175b88 0%, #004c83 50%, #139ddd 100%);
     padding: 6rem 2rem 4rem;
     text-align: center;
     color: var(--cor-secundaria);
@@ -841,4 +841,5 @@ form textarea {
     background-color: rgba(220, 53, 69, 0.2);
     color: #dc3545;
     border: 1px solid #dc3545;
+
 }
