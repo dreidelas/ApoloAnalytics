@@ -10,11 +10,11 @@
 
     background-image:
         var(--gradiente-primario),
-        url('../logo.png');
+        url('../banner.svg');
 
     background-size:
         cover,
-        40%;
+        100%;
 
     background-position:
         center,
@@ -797,7 +797,7 @@ footer p {
     /* ========== HERO ========== */
     .hero {
         height: 100vh;
-        background-size: cover, 60%; /* Aumenta o tamanho do logo em mobile */
+        background-size: cover, 385%; /* Aumenta o tamanho do logo em mobile */
     }
 
     .hero-content {
@@ -969,3 +969,4 @@ footer p {
         padding: 1.5rem 1rem;
     }
 }
+
