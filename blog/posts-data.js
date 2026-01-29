@@ -80,6 +80,42 @@ const posts = [
             <p><strong>Looker Studio:</strong> Startups, equipes de marketing digital, empresas focadas em Google Workspace.</p>
         `
     },
+    {
+    id: 3, // Incrementar sempre
+    title: "BI e IA no Varejo",
+    excerpt: "Entenda como o setor esta lidando com essas novas ferramentas",
+    category: "bi", // Opções: bi, analise-dados, tutoriais, cases
+    categoryName: "Business Intelligence", // Nome completo da categoria
+    date: "29 Jan, 2026", // Exemplo: "15 Jan, 2026"
+    readTime: "7 min", // Tempo estimado de leitura
+    slug: "BI e IA no Varejo", // URL amigável
+    image: "https://plus.unsplash.com/premium_vector-1725937278377-f46cf5a648ec?q=80&w=851&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // URL da imagem
+    content: `
+        <h2>No varejo global, adiar decisões já custa mais caro do que investir em tecnologia</h2>
+        <article>
+    <p>
+        No varejo global, adiar decisões já custa mais caro do que investir em tecnologia. 
+        Uma pesquisa recente da Dúnedain Research revela que 54% das empresas de varejo já utilizam a combinação de IA + Business Intelligence com um objetivo principal: velocidade na tomada de decisão. Casos como o da marca Guess mostram relatórios que levavam duas semanas sendo entregues em segundos através de bots de IA.
+    </p>
+
+    <p>
+        Mas, se o benefício é tão claro, por que tantas empresas ainda estão "travadas"? A matéria aponta barreiras reais que enfrentamos no dia a dia da consultoria:
+    </p>
+
+    <ol>
+        <li><strong>Custo e ROI pouco claro:</strong> Muitos líderes ainda veem a análise de dados como gasto, não como investimento com retorno mensurável.</li>
+        <li><strong>Expectativas Irrealistas:</strong> A ideia de que a IA resolve tudo sozinha, sem considerar o tempo de implementação e automação.</li>
+        <li><strong>Governança e Dados Fragmentados:</strong> Este é o maior vilão. Dados mal estruturados ou isolados geram respostas inconsistentes, o que mina a confiança do gestor.</li>
+    </ol>
+
+    <p>
+        Na <strong>Apolo Analytics</strong>, acreditamos que a tecnologia só funciona com uma base sólida. Não se trata apenas de "ter dados", mas de ter uma cultura <em>data-driven</em> com governança e processos claros.
+    </p>
+</article>
+        
+    
+    `
+}
     ,
     
 ];
