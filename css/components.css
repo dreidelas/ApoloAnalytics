@@ -111,7 +111,7 @@
 /* #region ========== SEÇÃO NOSSA PROPOSTA ========== */
 #proposta {
     color: var(--cor-intermediario);
-    /* Background agora controlado por layout.css */
+    background: linear-gradient(135deg, #1a2a35 0%, #2c3f4d 50%, #1f2c36 100%);
 }
 
 #proposta h2 {
@@ -657,11 +657,10 @@ footer p {
 
 /* #region ========== SEÇÃO DEPOIMENTOS ========== */
 #depoimentos {
-    /* Background agora controlado por layout.css */
+    background: linear-gradient(135deg, #f8fbff 0%, #eaf4f9 100%);
     position: relative;
     overflow: hidden;
 }
-
 
 #depoimentos::before {
     content: '';
