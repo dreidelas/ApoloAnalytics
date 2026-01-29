@@ -1,19 +1,28 @@
-/* #region ========== VARIÁVEIS ========== */
+/* #region ========== VARIÃVEIS ========== */
 :root {
-    /* Cores base */
-    --cor-primaria: #2c3f4d;
-    --cor-primaria-escura: #1f2c36;
-    --cor-secundaria: #eaf1f1;
-    --cor-destaque: #5a7a8f;
-    --cor-acento: #01afff;
-    --cor-intermediario: #2c3f4d;
+    /* Cores base em RGBA */
+    --cor-primaria: rgba(44, 63, 77, 1);           /* #2c3f4d */
+    --cor-primaria-escura: rgba(31, 44, 54, 1);    /* #1f2c36 */
+    --cor-secundaria: rgba(234, 241, 241, 1);      /* #eaf1f1 */
+    --cor-destaque: rgba(90, 122, 143, 1);         /* #5a7a8f */
+    --cor-acento: rgba(1, 175, 255, 1);            /* #01afff */
+    --cor-intermediario: rgba(44, 63, 77, 1);      /* #2c3f4d */
 
-    /* Texto */
-    --cor-texto-claro: #ebf1ea;
-    --cor-texto-escuro: #2c3f4d;
+    /* Texto em RGBA */
+    --cor-texto-claro: rgba(235, 241, 234, 1);     /* #ebf1ea */
+    --cor-texto-escuro: rgba(44, 63, 77, 1);       /* #2c3f4d */
 
-    /* Gradiente */
-  --gradiente-primario: linear-gradient(
+    /* Cores de fundo para containers (PERSONALIZÃVEIS AQUI) */
+    --bg-proposta: linear-gradient(135deg, rgba(26, 42, 53, 1) 0%, rgba(44, 63, 77, 1) 50%, rgba(31, 44, 54, 1) 100%);
+    --bg-servicos: rgba(245, 253, 255, 1);         /* #f5fdff */
+    --bg-dashboard: rgba(234, 241, 241, 1);        /* #eaf1f1 */
+    --bg-precos: rgba(234, 241, 241, 1);           /* #eaf1f1 */
+    --bg-sobre: rgba(44, 63, 77, 1);               /* #2c3f4d */
+    --bg-depoimentos: linear-gradient(135deg, rgba(248, 251, 255, 1) 0%, rgba(234, 244, 249, 1) 100%);
+    --bg-contato: rgba(30, 45, 56, 1);             /* #1e2d38 */
+
+    /* Gradientes */
+    --gradiente-primario: linear-gradient(
         135deg,
         rgba(0, 0, 0, 0.90), 
         rgba(8, 55, 88, 0.95)
@@ -23,8 +32,7 @@
     --fonte-principal: 'Montserrat', sans-serif;
     --fonte-secundaria: 'Segoe UI', Tahoma, Verdana, sans-serif;
 
-    /* Dimensões */
+    /* DimensÃµes */
     --altura-header: 4rem;
 }
 /* #endregion */
-
