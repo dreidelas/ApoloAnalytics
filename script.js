@@ -9,15 +9,35 @@ const resources = {
             "nav_blog": "Blog",
             "nav_precos": "Preços",
             "nav_contato": "Contato",
-            "hero_titulo": "Apolo Analytics",
             "hero_subtitulo": "Transforme dados em decisões estratégicas para o seu negócio",
             "hero_btn": "Entre em Contato",
             "prop_titulo": "Nossa Proposta",
-            "passo1_titulo": "Consulta Inicial",
-            "passo2_titulo": "Diagnóstico",
-            "passo3_titulo": "Proposta",
-            "passo4_titulo": "Execução",
-            "passo5_titulo": "Entrega"
+            "proposta_texto": "Seus dados têm <span class='destaque-primario'>histórias para contar</span> e nós sabemos como traduzi-las em <span class='destaque-secundario'>ações que impulsionam resultados</span>. Trabalhamos <span class='destaque-primario'>lado a lado</span> com você, do diagnóstico até a implementação.",
+            "proposta_estatistica_etapas": "Etapas",
+            "proposta_estatistica_objetivo": "Objetivo",
+            "proposta_estatistica_resultados": "Resultados",
+            "proposta_consulta_inicial_titulo": "Consulta Inicial",
+            "proposta_consulta_inicial": "Reunião para compreender suas necessidades, objetivos de negócio e desafios atuais. A <strong>Apolo</strong> analisa seu contexto e identifica oportunidades de melhoria através dos dados.",
+            "proposta_diagnostico_titulo": "Diagnóstico",
+            "proposta_diagnostico": "Avaliação detalhada da maturidade dos seus dados, sistemas existentes e processos. Identificamos gaps e definimos prioridades estratégicas para maximizar o retorno do investimento.",
+            "proposta_proposta_titulo": "Proposta",
+            "proposta_proposta": "Um dia útil após o recebimento da consulta, a <strong>Apolo</strong> envia uma proposta com a descrição dos serviços, prazos de entrega, orçamento e forma de pagamento.",
+            "proposta_execucao_titulo": "Execução",
+            "proposta_execucao": "De posse de todos arquivos necessários e de acordo com a demanda, a <strong>Apolo</strong> executa o projeto com acompanhamento contínuo e comunicação transparente sobre o progresso.",
+            "proposta_entrega_titulo": "Entrega",
+            "proposta_entrega": "Entregamos um relatório contendo uma documentação e descrição completa de todos os passos percorridos durante a execução do projeto, garantindo total transparência e conhecimento transferido.",
+            "nossos_servicos_titulo": "Nossos Serviços",
+            "servico_analise_exploratoria_titulo": "Análise Exploratória",
+            "servico_analise_exploratoria":"Descubra padrões e insights ocultos nos seus dados através de análises estatísticas avançadas e visualizações intuitivas.",
+            "servico_benchmark_titulo": "Benchmark",
+            "servico_benchmark":"Mapeamos o cenário competitivo e identificamos as melhores práticas do setor. Garanta que sua empresa atue com visão completa e inteligência de mercado.",
+            "servico_modelagem_preditiva_titulo": "Modelagem Preditiva",
+            "servico_modelagem_preditiva":"Utilize machine learning para prever tendências, comportamentos e resultados futuros do seu negócio.",
+            "servico_etl_integracao":"Automatize processos de coleta, transformação e carregamento de dados de múltiplas fontes.",
+            "servico_apoio_estrategico":"Orientação especializada para implementar uma cultura data-driven na sua organização.",
+            "servico_otimizacao_processos":"Identifique gargalos e oportunidades de melhoria através da análise detalhada de processos.",
+            "BI":"Explore o BI (Business Intelligence) elaborado com dados reais de uma planilha de CRM.",
+            "dashboard_dica":"💡 Dica: Use os filtros interativos para explorar diferentes perspectivas dos dados"
         }
     },
     "en": {
@@ -29,23 +49,55 @@ const resources = {
             "nav_blog": "Blog",
             "nav_precos": "Pricing",
             "nav_contato": "Contact",
-            "hero_titulo": "Apolo Analytics",
             "hero_subtitulo": "Transform data into strategic decisions for your business",
-            "hero_btn": "Contact Us",
+            "hero_btn": "Get in Touch",
             "prop_titulo": "Our Proposal",
-            "passo1_titulo": "Initial Consultation",
-            "passo2_titulo": "Diagnosis",
-            "passo3_titulo": "Proposal",
-            "passo4_titulo": "Execution",
-            "passo5_titulo": "Delivery"
+            "proposta_texto": "Your data has <span class='destaque-primario'>stories to tell</span> and we know how to translate them into <span class='destaque-secundario'>actions that drive results</span>. We work <span class='destaque-primario'>side by side</span> with you, from diagnosis to implementation.",
+            "proposta_estatistica_etapas": "Steps",
+            "proposta_estatistica_objetivo": "Goal",
+            "proposta_estatistica_resultados": "Results",
+            "proposta_consulta_inicial_titulo": "Initial Consultation",
+            "proposta_consulta_inicial": "Meeting to understand your needs, business objectives, and current challenges. <strong>Apolo</strong> analyzes your context and identifies improvement opportunities through data.",
+            "proposta_diagnostico_titulo": "Diagnosis",
+            "proposta_diagnostico": "Detailed assessment of your data maturity, existing systems, and processes. We identify gaps and define strategic priorities to maximize return on investment.",
+            "proposta_proposta_titulo": "Proposal",
+            "proposta_proposta": "One business day after the consultation, <strong>Apolo</strong> sends a proposal with service descriptions, delivery deadlines, budget, and payment methods.",
+            "proposta_execucao_titulo": "Execution",
+            "proposta_execucao": "With all necessary files in hand and according to demand, <strong>Apolo</strong> executes the project with continuous monitoring and transparent communication on progress.",
+            "proposta_entrega_titulo": "Delivery",
+            "proposta_entrega": "We deliver a report containing complete documentation and description of all steps taken during project execution, ensuring total transparency and knowledge transfer.",
+            "nossos_servicos_titulo": "Our Services",
+            "servico_analise_exploratoria_titulo": "Exploratory Analysis",
+            "servico_analise_exploratoria": "Discover hidden patterns and insights in your data through advanced statistical analysis and intuitive visualizations.",
+            "servico_benchmark_titulo": "Benchmark",
+            "servico_benchmark": "We map the competitive landscape and identify industry best practices. Ensure your company operates with a complete vision and market intelligence.",
+            "servico_modelagem_preditiva_titulo": "Predictive Modeling",
+            "servico_modelagem_preditiva": "Use machine learning to predict trends, behaviors, and future results for your business.",
+            "servico_etl_integracao": "Automate data collection, transformation, and loading processes from multiple sources.",
+            "servico_apoio_estrategico": "Specialized guidance to implement a data-driven culture in your organization.",
+            "servico_otimizacao_processos": "Identify bottlenecks and improvement opportunities through detailed process analysis.",
+            "BI": "Explore the BI (Business Intelligence) developed with real data from a CRM spreadsheet.",
+            "dashboard_dica": "💡 Tip: Use interactive filters to explore different data perspectives"
         }
     }
 };
 
 // Função para aplicar a tradução
 function atualizarTextos() {
+    // 1. Localiza elementos simples (sem tags)
     const localize = locI18next.init(i18next);
-    localize('body');
+    localize('[data-i18n]');
+
+    // 2. O "CURINGA" PARA QUALQUER TAG (span, strong, em, etc.)
+    document.querySelectorAll('[data-i18n]').forEach(elemento => {
+        const chave = elemento.getAttribute('data-i18n');
+        const traducao = i18next.t(chave);
+        
+        // Verifica se a tradução contém qualquer tag HTML
+        if (traducao.includes('<') && traducao.includes('>')) {
+            elemento.innerHTML = traducao;
+        }
+    });
 }
 
 // Inicializa o i18next

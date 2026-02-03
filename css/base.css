@@ -60,8 +60,6 @@ body {
 .lang-select {
     background-color: transparent;
     color: var(--cor-texto-claro);
-    border: 1px solid var(--cor-acento);
-    border-radius: 4px;
     padding: 4px 8px;
     font-family: var(--fonte-principal);
     font-size: 0.85rem;

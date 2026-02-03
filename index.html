@@ -62,7 +62,7 @@
         <!-- INÍCIO: HERO -->
         <section id="home" class="hero">
             <div class="container hero-content">
-                <h1 data-i18n="hero_titulo">Apolo Analytics</h1>
+                <h1>Apolo Analytics</h1>
                 <p data-i18n="hero_subtitulo">Transforme dados em decisões estratégicas para o seu negócio</p>
                 <button class="cta-button" data-i18n="hero_btn" onclick="document.getElementById('contato').scrollIntoView()">Entre em Contato</button>
             </div>
@@ -72,38 +72,39 @@
         <!-- INÍCIO: NOSSA PROPOSTA -->
         <section id="proposta">
             <div class="container">
-                <h2>Nossa Proposta</h2>
+                <h2 data-i18n="proposta_titulo">Nossa Proposta</h2>
                 
-<div class="proposta-intro-destaque">
-    <p class="intro-texto">
-        Seus dados têm <span class="destaque-primario">histórias para contar</span> 
-        e nós sabemos como traduzi-las em 
-        <span class="destaque-secundario">ações que impulsionam resultados</span>. 
-        Trabalhamos <span class="destaque-primario">lado a lado</span> com você, 
-        do diagnóstico até a implementação.
-    </p>
-    <div class="intro-stats">
-        <div class="stat-item">
-            <span class="stat-numero">5</span>
-            <span class="stat-label">Etapas</span>
-        </div>
-        <div class="stat-item">
-            <span class="stat-numero">1</span>
-            <span class="stat-label">Objetivo</span>
-        </div>
-        <div class="stat-item">
-            <span class="stat-numero">∞</span>
-            <span class="stat-label">Resultados</span>
-        </div>
-    </div>
-</div>
+            <div class="proposta-intro-destaque">
+                <p class="intro-texto" data-i18n="proposta_texto">
+                    Seus dados têm <span class="destaque-primario">histórias para contar</span> 
+                    e nós sabemos como traduzi-las em 
+                    <span class="destaque-secundario">ações que impulsionam resultados</span>. 
+                    Trabalhamos <span class="destaque-primario">lado a lado</span> com você, 
+                    do diagnóstico até a implementação.
+                </p>
+
+                <div class="intro-stats">
+                    <div class="stat-item">
+                        <span class="stat-numero">5</span>
+                        <span class="stat-label" data-i18n="proposta_estatistica_etapas">Etapas</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-numero">1</span>
+                        <span class="stat-label" data-i18n="proposta_estatistica_objetivo">Objetivo</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-numero">∞</span>
+                        <span class="stat-label" data-i18n="proposta_estatistica_resultados">Resultados</span>
+                    </div>
+                </div>
+            </div>
 
                 <div class="proposta-timeline">
                     <div class="proposta-step">
                         <div class="step-number">1</div>
                         <div class="step-content">
-                            <h3>Consulta Inicial</h3>
-                            <p>
+                            <h3 data-i18n="proposta_consulta_inicial_titulo">Consulta Inicial</h3>
+                            <p data-i18n="proposta_consulta_inicial">
                                 Reunião para compreender suas necessidades, objetivos de negócio e desafios atuais. A <strong>Apolo</strong> analisa seu contexto e identifica oportunidades de melhoria através dos dados.
                             </p>
                         </div>
@@ -112,8 +113,8 @@
                     <div class="proposta-step">
                         <div class="step-number">2</div>
                         <div class="step-content">
-                            <h3>Diagnóstico</h3>
-                            <p>
+                            <h3 data-i18n="proposta_diagnostico_titulo">Diagnóstico</h3>
+                            <p data-i18n="proposta_diagnostico">
                                 Avaliação detalhada da maturidade dos seus dados, sistemas existentes e processos. Identificamos gaps e definimos prioridades estratégicas para maximizar o retorno do investimento.
                             </p>
                         </div>
@@ -122,8 +123,8 @@
                     <div class="proposta-step">
                         <div class="step-number">3</div>
                         <div class="step-content">
-                            <h3>Proposta</h3>
-                            <p>
+                            <h3 data-i18n="proposta_proposta_titulo">Proposta</h3>
+                            <p data-i18n="proposta_proposta">
                                 Um dia útil após o recebimento da consulta, a <strong>Apolo</strong> envia uma proposta com a descrição dos serviços, prazos de entrega, orçamento e forma de pagamento.
                             </p>
                         </div>
@@ -132,8 +133,8 @@
                     <div class="proposta-step">
                         <div class="step-number">4</div>
                         <div class="step-content">
-                            <h3>Execução</h3>
-                            <p>
+                            <h3 data-i18n="proposta_execucao_titulo">Execução</h3>
+                            <p data-i18n="proposta_execucao">
                                 De posse de todos arquivos necessários e de acordo com a demanda, a <strong>Apolo</strong> executa o projeto com acompanhamento contínuo e comunicação transparente sobre o progresso.
                             </p>
                         </div>
@@ -142,8 +143,8 @@
                     <div class="proposta-step">
                         <div class="step-number">5</div>
                         <div class="step-content">
-                            <h3>Entrega</h3>
-                            <p>
+                            <h3 data-i18n="proposta_entrega_titulo">Entrega</h3>
+                            <p data-i18n="proposta_entrega">
                                 Entregamos um relatório contendo uma documentação e descrição completa de todos os passos percorridos durante a execução do projeto, garantindo total transparência e conhecimento transferido.
                             </p>
                         </div>
@@ -156,31 +157,34 @@
         <!-- INÍCIO: SERVIÇOS -->
         <section id="servicos">
             <div class="container">
-                <h2>Nossos Serviços</h2>
+                <h2 data-i18n="nossos_servicos_titulo">Nossos Serviços</h2>
                 <div class="services">
                     <div class="service-card">
-                        <h3><img src="grafic.png" alt="Ícone de Gráfico" class="icone-titulo"> Análise Exploratória</h3>
-                        <p>Descubra padrões e insights ocultos nos seus dados através de análises estatísticas avançadas e visualizações intuitivas.</p>
+                        <h3>
+                            <img src="grafic.png" alt="Ícone de Gráfico" class="icone-titulo"> 
+                            <span data-i18n="servico_analise_exploratoria_titulo">Análise Exploratória</span>
+                        </h3>
+                        <p data-i18n="servico_analise_exploratoria">Descubra padrões e insights ocultos nos seus dados através de análises estatísticas avançadas e visualizações intuitivas.</p>
                     </div>
                     <div class="service-card">
-                        <h3><img src="targeting.png" alt="Ícone de BI" class="icone-titulo"> Benchmark</h3>
-                        <p>Mapeamos o cenário competitivo e identificamos as melhores práticas do setor. Garanta que sua empresa atue com visão completa e inteligência de mercado.</p>
+                        <h3 data-i18n="servico_benchmark_titulo"><img src="targeting.png" alt="Ícone de BI" class="icone-titulo"> Benchmark</h3>
+                        <p data-i18n="servico_benchmark">Mapeamos o cenário competitivo e identificamos as melhores práticas do setor. Garanta que sua empresa atue com visão completa e inteligência de mercado.</p>
                     </div>
                     <div class="service-card">
-                        <h3><img src="analysis.png" alt="Ícone de Modelagem" class="icone-titulo"> Modelagem Preditiva</h3>
-                        <p>Utilize machine learning para prever tendências, comportamentos e resultados futuros do seu negócio.</p>
+                        <h3 data-i18n="servico_modelagem_preditiva_titulo"><img src="analysis.png" alt="Ícone de Modelagem" class="icone-titulo"> Modelagem Preditiva</h3>
+                        <p data-i18n="servico_modelagem_preditiva">Utilize machine learning para prever tendências, comportamentos e resultados futuros do seu negócio.</p>
                     </div>
                     <div class="service-card">
                         <h3><img src="database.png" alt="Ícone de Consultoria" class="icone-titulo"> ETL e Integração</h3>
-                        <p>Automatize processos de coleta, transformação e carregamento de dados de múltiplas fontes.</p>
+                        <p data-i18n="servico_etl_integracao">Automatize processos de coleta, transformação e carregamento de dados de múltiplas fontes.</p>
                     </div>
                     <div class="service-card">
                         <h3><img src="empathy.png" alt="Ícone de ETL" class="icone-titulo"> Apoio Estratégico</h3>
-                        <p>Orientação especializada para implementar uma cultura data-driven na sua organização.</p>
+                        <p data-i18n="servico_apoio_estrategico">Orientação especializada para implementar uma cultura data-driven na sua organização.</p>
                     </div>
                     <div class="service-card">
                         <h3><img src="team.png" alt="Ícone de Otimização" class="icone-titulo"> Otimização de Processos</h3>
-                        <p>Identifique gargalos e oportunidades de melhoria através da análise detalhada de processos.</p>
+                        <p data-i18n="servico_otimizacao_processos">Identifique gargalos e oportunidades de melhoria através da análise detalhada de processos.</p>
                     </div>
                 </div>
             </div>
@@ -193,7 +197,7 @@
                 <h2>
                     <img src="business-intelligence.png" alt="Ícone Dashboard" class="icone-titulo"> Dashboard Interativo
                 </h2>
-                <p class="dashboard-intro">Explore o BI (Business Intelligence) elaborado com dados reais de uma planilha de CRM.</p>
+                <p class="dashboard-intro" data-i18n="BI">Explore o BI (Business Intelligence) elaborado com dados reais de uma planilha de CRM.</p>
                 <div class="dashboard-container">
                     <iframe
                         class="looker-iframe"
@@ -204,7 +208,7 @@
                         sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox">
                     </iframe>
                 </div>
-                <p class="dashboard-note">💡 Dica: Use os filtros interativos para explorar diferentes perspectivas dos dados</p>
+                <p class="dashboard-note" data-i18n="dashboard_dica">💡 Dica: Use os filtros interativos para explorar diferentes perspectivas dos dados</p>
             </div>
         </section>
         <!-- FIM: DASHBOARD -->
@@ -218,11 +222,11 @@
                         <h3>Básico</h3>
                         <p class="description">Ideal para empresas que estão começando a entender o valor da análise de dados.</p>
                         <ul class="features-list">
-                            <li>Análise Exploratória Mensal</li>
-                            <li>Dashboards Elaborados e Eficazes</li>
-                            <li>Relatório Mensal</li>
+                            <li data-i18n="plano_basico_analise_exploratoria">Análise Exploratória Mensal</li>
+                            <li data-i18n="plano_basico_dashboards">Dashboards Elaborados e Eficazes</li>
+                            <li data-i18n="plano_basico_relatorio_mensal">Relatório Mensal</li>
                         </ul>
-                        <a href="#contato" class="pricing-button">Fale Conosco</a>
+                        <a href="#contato" class="pricing-button" data-i18n="fale_conosco">Fale Conosco</a>
                     </div>
 
                     <div class="pricing-card featured">
@@ -230,20 +234,20 @@
                         <h3>Profissional</h3>
                         <p class="description">Para empresas que buscam insights avançados e dashboards que fogem do genérico.</p>
                         <ul class="features-list">
-                            <li>Tudo do plano Básico</li>
-                            <li>Modelegem e Automação</li>
-                            <li>Relatórios em Qualquer Formato</li>
+                            <li data-i18n="plano_profissional_tudo_basico">Tudo do plano Básico</li>
+                            <li data-i18n="plano_profissional_modelegem_automaticacao">Modelagem e Automação</li>
+                            <li data-i18n="plano_profissional_relatorios_qualquer_formato">Relatórios em Qualquer Formato</li>
                         </ul>
-                        <a href="#contato" class="pricing-button">Fale Conosco</a>
+                        <a href="#contato" class="pricing-button" data-i18n="fale_conosco">Fale Conosco</a>
                     </div>
 
                     <div class="pricing-card">
                         <h3>Empresarial</h3>
-                        <p class="description">Solução completa para dados complexos e situações específicas.</p>
+                        <p class="description" data-i18n="plano_empresarial_descricao">Solução completa para dados complexos e situações específicas.</p>
                         <ul class="features-list">
-                            <li>Equipe Exclusiva</li>
-                            <li>Consultoria dedicada</li>
-                            <li>Agenda Prioritária</li>
+                            <li data-i18n="plano_empresarial_equipe_exclusiva">Equipe Exclusiva</li>
+                            <li data-i18n="plano_empresarial_consultoria_dedicada">Consultoria dedicada</li>
+                            <li data-i18n="plano_empresarial_agenda_prioritaria">Agenda Prioritária</li>
                         </ul>
                         <a href="#contato" class="pricing-button">Fale Conosco</a>
                     </div>
@@ -255,10 +259,10 @@
         <!-- INÍCIO: SOBRE -->
         <section id="sobre">
             <div class="container">
-                <h2>Sobre Nós</h2>
+                <h2 data-i18n="sobre_nos_titulo">Sobre Nós</h2>
                 <div class="about">
-                    <p>A Apolo Analystics é especializada em transformar dados brutos em inteligência de negócio acionável.</p>
-                    <p>Nossa missão é democratizar o acesso à análise de dados avançada, tornando-a acessível para organizações de todos os tamanhos.</p>
+                    <p data-i18n="sobre_nos_descricao_1">A Apolo Analystics é especializada em transformar dados brutos em inteligência de negócio acionável.</p>
+                    <p data-i18n="sobre_nos_descricao_2">Nossa missão é democratizar o acesso à análise de dados avançada, tornando-a acessível para organizações de todos os tamanhos.</p>
                 </div>
             </div>
         </section>
@@ -268,9 +272,9 @@
 <section id="depoimentos">
     <div class="container">
         <div class="depoimentos-header">
-            <span class="depoimentos-tag">Casos de Sucesso</span>
-            <h2>Clientes que Transformaram Dados em Resultados</h2>
-            <p class="depoimentos-subtitle">Veja como ajudamos empresas a tomar decisões mais inteligentes</p>
+            <span class="depoimentos-tag" data-i18n="depoimentos_tag">Casos de Sucesso</span>
+            <h2 data-i18n="depoimentos_titulo">Clientes que Transformaram Dados em Resultados</h2>
+            <p class="depoimentos-subtitle" data-i18n="depoimentos_subtitulo">Veja como ajudamos empresas a tomar decisões mais inteligentes</p>
         </div>
         
         <div class="depoimentos-grid">
