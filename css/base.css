@@ -47,3 +47,56 @@ body {
     }
 }
 /* #endregion */
+
+/* #region ========== MENU SELETOR DE IDIOMAS ========== */
+/* Estilização do Item de Idioma */
+.lang-item {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+/* Estilização do Select usando suas variáveis */
+.lang-select {
+    background-color: transparent;
+    color: var(--cor-texto-claro);
+    border: 1px solid var(--cor-acento);
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-family: var(--fonte-principal);
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+    appearance: none; /* Remove a seta padrão em alguns browsers */
+    -webkit-appearance: none;
+    text-align: center;
+}
+
+.lang-select:hover {
+    background-color: var(--cor-acento);
+    color: var(--cor-primaria-escura);
+}
+
+/* Estilo das opções dentro do select */
+.lang-select option {
+    background-color: var(--cor-primaria-escura);
+    color: var(--cor-texto-claro);
+}
+
+/* Ajuste para o menu mobile (Hamburger) */
+@media (max-width: 768px) {
+    .lang-item {
+        margin-left: 0;
+        margin-top: 1.5rem;
+        justify-content: center;
+    }
+    
+    .lang-select {
+        width: 80px;
+        padding: 10px;
+        font-size: 1rem;
+    }
+}
+/* #endregion */

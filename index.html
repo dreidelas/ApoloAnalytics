@@ -41,13 +41,19 @@
                 </div>
 
                 <ul class="nav-links" id="navLinks">
-                    <li><a href="#home">Início</a></li>
-                    <li><a href="#proposta">Nossa Proposta</a></li>
-                    <li><a href="#servicos">Serviços</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="blog/index.html">Blog</a></li>
-                    <li><a href="#precos">Preços</a></li>
-                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#home" data-i18n="nav_inicio">Início</a></li>
+                    <li><a href="#proposta" data-i18n="nav_proposta">Nossa Proposta</a></li>
+                    <li><a href="#servicos" data-i18n="nav_servicos">Serviços</a></li>
+                    <li><a href="#sobre" data-i18n="nav_sobre">Sobre</a></li>
+                    <li><a href="blog/index.html" data-i18n="nav_blog">Blog</a></li>
+                    <li><a href="#precos" data-i18n="nav_precos">Preços</a></li>
+                    <li><a href="#contato" data-i18n="nav_contato">Contato</a></li>
+                    <li class="lang-item">
+                        <select id="language-switcher" class="lang-select">
+                            <option value="pt-BR">PT</option>
+                            <option value="en">EN</option>
+                        </select>
+                    </li>
                 </ul>
             </nav>
         </header>
@@ -56,9 +62,9 @@
         <!-- INÍCIO: HERO -->
         <section id="home" class="hero">
             <div class="container hero-content">
-                <h1>Apolo Analytics</h1>
-                <p>Transforme dados em decisões estratégicas para o seu negócio</p>
-                <button class="cta-button" onclick="document.getElementById('contato').scrollIntoView()">Entre em Contato</button>
+                <h1 data-i18n="hero_titulo">Apolo Analytics</h1>
+                <p data-i18n="hero_subtitulo">Transforme dados em decisões estratégicas para o seu negócio</p>
+                <button class="cta-button" data-i18n="hero_btn" onclick="document.getElementById('contato').scrollIntoView()">Entre em Contato</button>
             </div>
         </section>
         <!-- FIM: HERO -->
@@ -430,6 +436,9 @@
         <!-- FIM: RODAPÉ -->
 
         <!-- INÍCIO: SCRIPTS -->
+        <script src="https://unpkg.com/i18next/dist/umd/i18next.min.js"></script>
+        <script src="https://unpkg.com/loc-i18next/dist/umd/loc-i18next.min.js"></script>
+
         <script src="script.js"></script>
         <!-- FIM: SCRIPTS -->
     </body>
