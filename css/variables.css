@@ -33,7 +33,7 @@
     /* Alternativa gradiente vertical: --bg-hero: linear-gradient(to bottom, #175b88, #139ddd); */
     
     /* PROPOSTA */
-    --bg-proposta: linear-gradient(135deg, #1a2a35 0%, #2c3f4d 50%, #1f2c36 100%);
+    --bg-proposta: linear-gradient(135deg, #000000 0%, #01192b 50%, #03023d 100%);
     /* Alternativa cor sólida: --bg-proposta: #1a2a35; */
     /* Alternativa gradiente suave: --bg-proposta: linear-gradient(180deg, #1a2a35, #2c3f4d); */
     
@@ -63,7 +63,7 @@
     /* Alternativa gradiente forte: --bg-depoimentos: linear-gradient(135deg, #e0f7fa, #ffffff); */
     
     /* CONTATO */
-    --bg-contato: linear-gradient(135deg, #000000, #5b6169);
+    --bg-contato: linear-gradient(135deg, #000000 70%, #01afff);
     /* Alternativa gradiente: --bg-contato: linear-gradient(135deg, #1e2d38, #0d1117); */
     /* Alternativa gradiente dramático: --bg-contato: linear-gradient(to bottom, #000000, #1e2d38); */
     
