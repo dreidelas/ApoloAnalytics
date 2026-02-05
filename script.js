@@ -237,6 +237,57 @@ document.addEventListener('DOMContentLoaded', () => {
  * Função para carregar o dashboard do Looker Studio
  * Chamada quando o usuário clica no botão
  */
+// ========================================
+// LAZY LOAD MANUAL DO DASHBOARD COM DETECÇÃO MOBILE
+// ========================================
+
+/**
+ * Detecta se o usuário está em dispositivo móvel
+ */
+function isMobileDevice() {
+    // PRIORIDADE 1: Largura da tela (funciona em DevTools e Live Preview)
+    const screenWidth = window.innerWidth;
+    const isMobileScreen = screenWidth <= 768;
+    
+    // PRIORIDADE 2: User Agent (para dispositivos reais)
+    const userAgent = navigator.userAgent.toLowerCase();
+    const mobileKeywords = ['android', 'webos', 'iphone', 'ipad', 'ipod', 'blackberry', 'windows phone'];
+    const isMobileUA = mobileKeywords.some(keyword => userAgent.includes(keyword));
+    
+    // PRIORIDADE 3: Touch support
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    
+    // DEBUG: Mostra informações no console
+    console.log('=== DETECÇÃO DE DISPOSITIVO ===');
+    console.log('Largura da tela:', screenWidth + 'px');
+    console.log('É mobile pela tela?', isMobileScreen ? 'SIM' : 'NÃO');
+    console.log('User Agent:', userAgent);
+    console.log('É mobile pelo UA?', isMobileUA ? 'SIM' : 'NÃO');
+    console.log('Tem touch?', isTouchDevice ? 'SIM' : 'NÃO');
+    console.log('===============================');
+    
+    // Retorna TRUE se a tela for pequena OU se for mobile real
+    return isMobileScreen || isMobileUA;
+}
+
+/**
+ * Retorna a URL correta do dashboard baseado no dispositivo
+ */
+function getDashboardURL() {
+    if (isMobileDevice()) {
+        // Dashboard Mobile
+        return 'https://lookerstudio.google.com/embed/reporting/376200d4-1739-4e0b-b8e3-407e36631a05/page/0NhnF';
+    } else {
+        // Dashboard Desktop
+        return 'https://lookerstudio.google.com/embed/reporting/fc49fdb9-f271-4463-8382-59490d2a7818/page/PrFhF';
+    }
+}
+
+/**
+ * Função para carregar o dashboard do Looker Studio
+ * Chamada quando o usuário clica no botão
+ * Carrega automaticamente a versão correta (mobile ou desktop)
+ */
 function loadDashboard() {
     const placeholder = document.getElementById('dashboard-placeholder');
     const button = placeholder.querySelector('.dashboard-load-btn');
@@ -246,16 +297,26 @@ function loadDashboard() {
         return;
     }
     
+    // Detecta o tipo de dispositivo
+    const isMobile = isMobileDevice();
+    const dashboardURL = getDashboardURL();
+    
+    // Log para debug (pode remover depois)
+    console.log('Dispositivo:', isMobile ? 'Mobile' : 'Desktop');
+    console.log('URL do Dashboard:', dashboardURL);
+    
     // Guarda a posição atual do scroll
     const scrollPosition = window.scrollY;
     
     // Adiciona classe de loading
     placeholder.classList.add('dashboard-loading');
     
-    // Desabilita o botão temporariamente
+    // Atualiza o botão com feedback do tipo de dashboard
     if (button) {
         button.disabled = true;
-        button.innerHTML = '<span>Carregando...</span>';
+        button.innerHTML = isMobile 
+            ? '<span>Carregando versão mobile...</span>' 
+            : '<span>Carregando versão desktop...</span>';
     }
     
     // Pequeno delay para feedback visual
@@ -263,13 +324,16 @@ function loadDashboard() {
         // Cria o iframe
         const iframe = document.createElement('iframe');
         iframe.className = 'looker-iframe';
-        iframe.src = 'https://lookerstudio.google.com/embed/reporting/fc49fdb9-f271-4463-8382-59490d2a7818/page/PrFhF';
+        iframe.src = dashboardURL; // URL dinâmica baseada no dispositivo
         iframe.frameBorder = '0';
         iframe.style.border = '0';
         iframe.allowFullscreen = true;
         iframe.setAttribute('sandbox', 'allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox');
         iframe.setAttribute('tabindex', '-1');
         iframe.setAttribute('loading', 'eager');
+        
+        // Adiciona atributo data para identificação
+        iframe.setAttribute('data-dashboard-type', isMobile ? 'mobile' : 'desktop');
         
         // Previne auto-scroll quando o iframe carregar
         iframe.addEventListener('load', () => {
@@ -284,6 +348,9 @@ function loadDashboard() {
             
             // Remove classe de loading
             placeholder.classList.remove('dashboard-loading');
+            
+            // Log de sucesso
+            console.log('Dashboard carregado com sucesso:', isMobile ? 'Mobile' : 'Desktop');
         });
         
         // Previne foco automático
@@ -298,6 +365,37 @@ function loadDashboard() {
         
     }, 300); // 300ms de delay para feedback visual
 }
+
+/**
+ * Auto-load opcional quando a seção fica visível
+ * Descomente o código abaixo se quiser que carregue automaticamente
+ */
+/*
+const dashboardAutoLoad = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const btn = entry.target.querySelector('.dashboard-load-btn');
+            if (btn && !btn.disabled) {
+                // Auto-clica após 1 segundo de visibilidade
+                setTimeout(() => {
+                    btn.click();
+                }, 1000);
+                dashboardAutoLoad.unobserve(entry.target);
+            }
+        }
+    });
+}, {
+    threshold: 0.3,
+    rootMargin: '0px'
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const placeholder = document.getElementById('dashboard-placeholder');
+    if (placeholder) {
+        dashboardAutoLoad.observe(placeholder);
+    }
+});
+*/
 
 /**
  * Auto-load opcional quando a seção fica visível
