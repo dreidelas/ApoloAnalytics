@@ -191,27 +191,33 @@
         </section>
         <!-- FIM: SERVIÇOS -->
 
-        <!-- INÍCIO: DASHBOARD (LOoker Studio) -->
-        <section id="dashboard">
-            <div class="container">
-                <h2>
-                    <img src="business-intelligence.png" alt="Ícone Dashboard" class="icone-titulo"> Dashboard Interativo
-                </h2>
-                <p class="dashboard-intro" data-i18n="BI">Explore o BI (Business Intelligence) elaborado com dados reais de uma planilha de CRM.</p>
-                <div class="dashboard-container">
-                    <iframe
-                        class="looker-iframe"
-                        src="https://lookerstudio.google.com/embed/reporting/fc49fdb9-f271-4463-8382-59490d2a7818/page/PrFhF"
-                        frameborder="0"
-                        style="border:0"
-                        allowfullscreen
-                        sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox">
-                    </iframe>
-                </div>
-                <p class="dashboard-note" data-i18n="dashboard_dica">💡 Dica: Use os filtros interativos para explorar diferentes perspectivas dos dados</p>
+        <!-- INÍCIO: DASHBOARD (Looker Studio) -->
+<section id="dashboard">
+    <div class="container">
+        <h2>
+            <img src="business-intelligence.png" alt="Ícone Dashboard" class="icone-titulo"> Dashboard Interativo
+        </h2>
+        <p class="dashboard-intro" data-i18n="BI">Explore o BI (Business Intelligence) elaborado com dados reais de uma planilha de CRM.</p>
+        
+        <!-- Placeholder do Dashboard -->
+        <div id="dashboard-placeholder" class="dashboard-container">
+            <div class="dashboard-loader">
+                <div class="loader-icon"></div>
+                <h3>Dashboard Interativo</h3>
+                <p>Clique no botão abaixo para carregar o painel de Business Intelligence</p>
+                <button onclick="loadDashboard()" class="cta-button dashboard-load-btn">
+                    <span>Carregar Dashboard</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
             </div>
-        </section>
-        <!-- FIM: DASHBOARD -->
+        </div>
+        
+        <p class="dashboard-note" data-i18n="dashboard_dica">💡 Dica: Use os filtros interativos para explorar diferentes perspectivas dos dados</p>
+    </div>
+</section>
+<!-- FIM: DASHBOARD -->
 
         <!-- INÍCIO: PREÇOS -->
         <section id="precos">
