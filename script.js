@@ -36,6 +36,16 @@ const resources = {
             "servico_etl_integracao":"Automatize processos de coleta, transformação e carregamento de dados de múltiplas fontes.",
             "servico_apoio_estrategico":"Orientação especializada para implementar uma cultura data-driven na sua organização.",
             "servico_otimizacao_processos":"Identifique gargalos e oportunidades de melhoria através da análise detalhada de processos.",
+            "servico_otimizacao_processos":"Identifique gargalos e oportunidades de melhoria através da análise detalhada de processos.",
+
+// 👇 ADICIONE ESTAS LINHAS AQUI
+"sobre_tag": "Nossa missão",
+"sobre_titulo": "A Apolo Analytics",
+"sobre_paragrafo_1": "Vivemos em um mundo onde decisões estratégicas precisam ser rápidas e precisas, e é aqui que os dados se tornam um recurso inestimável. Mas, para nós, os dados não são apenas números em uma planilha. Eles são histórias esperando para ser contadas, são insights que podem guiar decisões, são a base para o crescimento sustentável de qualquer empresa.",
+"sobre_paragrafo_2": "Na Apolo Analytics, acreditamos que enxergar é muito mais do que apenas ver. É compreender profundamente, é descobrir o que antes estava oculto, é revelar o verdadeiro potencial de um negócio. Nossa missão é simples e poderosa: transformar a forma de enxergar as empresas através dos dados.",
+"sobre_paragrafo_3": "Nosso compromisso vai além de fornecer tecnologia ou consultoria. Estamos comprometidos em transformar a maneira como você vê seu negócio. Queremos que você descubra novas oportunidades, tome decisões mais informadas e, acima de tudo, enxergue o caminho para o crescimento com mais clareza.",
+
+"BI":"Explore o BI (Business Intelligence) elaborado com dados reais de uma planilha de CRM.",
             "BI":"Explore o BI (Business Intelligence) elaborado com dados reais de uma planilha de CRM.",
             "dashboard_dica":"💡 Dica: Use os filtros interativos para explorar diferentes perspectivas dos dados"
         }
@@ -76,6 +86,18 @@ const resources = {
             "servico_etl_integracao": "Automate data collection, transformation, and loading processes from multiple sources.",
             "servico_apoio_estrategico": "Specialized guidance to implement a data-driven culture in your organization.",
             "servico_otimizacao_processos": "Identify bottlenecks and improvement opportunities through detailed process analysis.",
+            // ... código anterior ...
+"servico_otimizacao_processos": "Identify bottlenecks and improvement opportunities through detailed process analysis.",
+
+// 👇 ADICIONE ESTAS LINHAS AQUI
+"sobre_tag": "Our mission",
+"sobre_titulo": "About Apolo Analytics",
+"sobre_paragrafo_1": "We live in a world where strategic decisions need to be fast and accurate, and this is where data becomes an invaluable resource. But for us, data is not just numbers on a spreadsheet. They are stories waiting to be told, insights that can guide decisions, the foundation for sustainable growth of any company.",
+"sobre_paragrafo_2": "At Apolo Analytics, we believe that seeing is much more than just looking. It's understanding deeply, discovering what was previously hidden, revealing the true potential of a business. Our mission is simple yet powerful: to transform the way companies are seen through data.",
+"sobre_paragrafo_3": "Our commitment goes beyond providing technology or consulting. We are committed to transforming the way you see your business. We want you to discover new opportunities, make more informed decisions, and above all, see the path to growth with greater clarity.",
+
+"BI": "Explore the BI (Business Intelligence) developed with real data from a CRM spreadsheet.",
+// ... resto do código ...
             "BI": "Explore the BI (Business Intelligence) developed with real data from a CRM spreadsheet.",
             "dashboard_dica": "💡 Tip: Use interactive filters to explore different data perspectives"
         }
