@@ -1,30 +1,231 @@
-/* #region ========== VARIÁVEIS ========== */
+/* ========================================
+   SISTEMA DE VARIÁVEIS CSS - APOLO ANALYTICS
+   VERSÃO 2.1 - SUPORTE COMPLETO A GRADIENTES
+   ======================================== */
+
 :root {
-    /* Cores base */
-    --cor-primaria: #2c3f4d;
-    --cor-primaria-escura: #1f2c36;
-    --cor-secundaria: #eaf1f1;
-    --cor-destaque: #5a7a8f;
-    --cor-acento: #01afff;
-    --cor-intermediario: #2c3f4d;
-
-    /* Texto */
-    --cor-texto-claro: #ebf1ea;
-    --cor-texto-escuro: #2c3f4d;
-
-    /* Gradiente */
-  --gradiente-primario: linear-gradient(
-        135deg,
-        rgba(0, 0, 0, 0.90), 
-        rgba(8, 55, 88, 0.95)
-    );
+    /* ========== CORES PRINCIPAIS ========== */
+    --cor-primaria: #2c3f4d;           /* Azul escuro principal */
+    --cor-primaria-escura: #1f2c36;    /* Variação mais escura */
+    --cor-primaria-media: #1a2a35;     /* Variação média */
+    --cor-secundaria: #eaf1f1;         /* Cinza claro/branco */
+    --cor-destaque: #5a7a8f;           /* Azul acinzentado */
+    --cor-acento: #01afff;             /* Azul vibrante (CTAs) */
+    --cor-acento-hover: #0891d4;       /* Acento hover */
+    --cor-acento-claro: #5dd5ff;       /* Acento claro */
     
-    /* Fontes */
+    /* ========== CORES DE TEXTO ========== */
+    --cor-texto-claro: #ebf1ea;        /* Texto em fundos escuros */
+    --cor-texto-escuro: #2c3f4d;       /* Texto em fundos claros */
+    --cor-texto-medio: #3a4f5e;        /* Texto médio */
+    --cor-texto-suave: #5a7a8f;        /* Texto suave/secundário */
+    --cor-texto-branco: #ffffff;       /* Branco puro */
+    
+    /* ========== BACKGROUNDS DE SEÇÕES ========== */
+    /* OBSERVAÇÃO: Para usar cor sólida, coloque apenas a cor (ex: #ffffff)
+              Para usar gradiente, use linear-gradient(...)
+              Exemplos estão comentados abaixo de cada variável */
+    
+    /* HERO */
+    --bg-hero: linear-gradient(135deg, #175b88 0%, #004c83 50%, #139ddd 100%);
+    /* Alternativa cor sólida: --bg-hero: #175b88; */
+    /* Alternativa gradiente diagonal: --bg-hero: linear-gradient(45deg, #175b88, #139ddd); */
+    /* Alternativa gradiente vertical: --bg-hero: linear-gradient(to bottom, #175b88, #139ddd); */
+    
+    /* PROPOSTA */
+    --bg-proposta: linear-gradient(135deg, #1a2a35 0%, #2c3f4d 50%, #1f2c36 100%);
+    /* Alternativa cor sólida: --bg-proposta: #1a2a35; */
+    /* Alternativa gradiente suave: --bg-proposta: linear-gradient(180deg, #1a2a35, #2c3f4d); */
+    
+    /* SERVIÇOS */
+    --bg-servicos: linear-gradient(135deg, #ffffff, #ebf7fa);
+    /* Alternativa gradiente claro: --bg-servicos: linear-gradient(135deg, #f5fdff, #e0f7fa); */
+    /* Alternativa gradiente vibrante: --bg-servicos: linear-gradient(to right, #e0f7fa, #b2ebf2); */
+    
+    /* DASHBOARD */
+    --bg-dashboard: linear-gradient(135deg, #000000, #042e47);
+    /* Alternativa gradiente: --bg-dashboard: linear-gradient(135deg, #2c3f4d, #1a2a35); */
+    /* Alternativa gradiente forte: --bg-dashboard: linear-gradient(to bottom, #1a2a35, #0d1117); */
+    
+    /* PREÇOS */
+    --bg-precos: linear-gradient(135deg, #ffffff, #efffff);
+    /* Alternativa gradiente: --bg-precos: linear-gradient(135deg, #ffffff, #eaf1f1); */
+    /* Alternativa gradiente colorido: --bg-precos: linear-gradient(135deg, #e0f7fa, #f5fdff); */
+    
+    /* SOBRE */
+    --bg-sobre: linear-gradient(135deg,  #00223b,#0a456e);
+    /* Alternativa gradiente: --bg-sobre: linear-gradient(135deg, #2c3f4d, #1f2c36); */
+    /* Alternativa gradiente dramático: --bg-sobre: linear-gradient(to bottom, #0d1117, #2c3f4d); */
+    
+    /* DEPOIMENTOS */
+    --bg-depoimentos: linear-gradient(135deg, #f8fbff 0%, #eaf4f9 100%);
+    /* Alternativa cor sólida: --bg-depoimentos: #f8fbff; */
+    /* Alternativa gradiente forte: --bg-depoimentos: linear-gradient(135deg, #e0f7fa, #ffffff); */
+    
+    /* CONTATO */
+    --bg-contato: linear-gradient(135deg, #000000, #5b6169);
+    /* Alternativa gradiente: --bg-contato: linear-gradient(135deg, #1e2d38, #0d1117); */
+    /* Alternativa gradiente dramático: --bg-contato: linear-gradient(to bottom, #000000, #1e2d38); */
+    
+    /* FOOTER */
+    --bg-footer: rgba(30, 45, 56, 0.8);
+    /* Alternativa gradiente com transparência: --bg-footer: linear-gradient(135deg, rgba(30,45,56,0.8), rgba(13,17,23,0.9)); */
+    
+    /* ========== BACKGROUNDS DE CARDS ========== */
+    /* Cards também podem ter gradientes! */
+    
+    --bg-card-branco: #ffffff;
+    /* Alternativa gradiente suave: --bg-card-branco: linear-gradient(135deg, #ffffff, #f8f9fa); */
+    /* Alternativa gradiente brilhante: --bg-card-branco: linear-gradient(to bottom, #ffffff, #f0f0f0); */
+    
+    --bg-card-claro: rgba(235, 241, 234, 0.1);
+    /* Alternativa gradiente: --bg-card-claro: linear-gradient(135deg, rgba(235,241,234,0.1), rgba(235,241,234,0.05)); */
+    
+    --bg-card-destaque: rgba(123, 165, 145, 0.05);
+    /* Alternativa gradiente: --bg-card-destaque: linear-gradient(135deg, rgba(1,175,255,0.05), rgba(123,165,145,0.05)); */
+    
+    --bg-card-escuro: linear-gradient(135deg, #2c3f4d 0%, #1f2c36 100%);
+    /* Alternativa cor sólida: --bg-card-escuro: #2c3f4d; */
+    /* Alternativa gradiente forte: --bg-card-escuro: linear-gradient(135deg, #1a2a35, #0d1117); */
+    
+    /* ========== BACKGROUNDS DE BOTÕES ========== */
+    /* Botões também podem ter gradientes! */
+    
+    --bg-botao-primario: #01afff;
+    /* Alternativa gradiente: --bg-botao-primario: linear-gradient(135deg, #01afff, #0891d4); */
+    /* Alternativa gradiente vibrante: --bg-botao-primario: linear-gradient(to right, #5dd5ff, #01afff); */
+    
+    --bg-botao-hover: #0891d4;
+    /* Alternativa gradiente: --bg-botao-hover: linear-gradient(135deg, #0891d4, #0771a8); */
+    
+    --bg-botao-secundario: rgba(235, 241, 234, 0.1);
+    /* Alternativa gradiente: --bg-botao-secundario: linear-gradient(135deg, rgba(235,241,234,0.1), rgba(1,175,255,0.1)); */
+    
+    /* ========== GRADIENTES PREDEFINIDOS ========== */
+    /* Use estes para aplicações rápidas */
+    
+    --gradiente-primario: linear-gradient(135deg, rgba(0, 0, 0, 0.90), rgba(8, 55, 88, 0.95));
+    --gradiente-acento: linear-gradient(135deg, #01afff 0%, #0891d4 50%, #5a7a8f 100%);
+    --gradiente-acento-reverso: linear-gradient(135deg, #01afff 0%, #5dd5ff 100%);
+    --gradiente-proposta-card: linear-gradient(135deg, rgba(31, 44, 54, 0.8) 0%, rgba(44, 63, 77, 0.8) 100%);
+    
+    /* Novos gradientes prontos para usar */
+    --gradiente-claro: linear-gradient(135deg, #ffffff, #f0f0f0);
+    --gradiente-escuro: linear-gradient(135deg, #1a2a35, #0d1117);
+    --gradiente-azul-vibrante: linear-gradient(135deg, #01afff, #5dd5ff);
+    --gradiente-suave: linear-gradient(180deg, #f8f9fa, #e9ecef);
+    --gradiente-dramatico: linear-gradient(to bottom, #000000, #1a2a35);
+    
+    /* Gradientes radiais (circular) */
+    --gradiente-radial-acento: radial-gradient(circle at center, #01afff, #0891d4);
+    --gradiente-radial-escuro: radial-gradient(circle at top, #2c3f4d, #0d1117);
+    
+    /* ========== BORDAS ========== */
+    --borda-clara: rgba(123, 165, 145, 0.2);
+    --borda-acento: #01afff;
+    --borda-acento-transparente: rgba(1, 175, 255, 0.3);
+    --borda-escura: rgba(255, 255, 255, 0.1);
+    
+    /* Bordas com gradiente (para border-image) */
+    --borda-gradiente-acento: linear-gradient(135deg, #01afff, #5dd5ff);
+    --borda-gradiente-arco-iris: linear-gradient(45deg, #01afff, #0891d4, #5a7a8f, #01afff);
+    
+    /* ========== SOMBRAS ========== */
+    --sombra-leve: 0 4px 15px rgba(0, 0, 0, 0.08);
+    --sombra-media: 0 10px 30px rgba(44, 63, 77, 0.15);
+    --sombra-forte: 0 15px 30px rgba(44, 63, 77, 0.15);
+    --sombra-acento: 0 10px 20px rgba(123, 165, 145, 0.3);
+    --sombra-acento-hover: 0 15px 30px rgba(1, 175, 255, 0.4);
+    --sombra-dramatica: 0 20px 60px rgba(0, 0, 0, 0.3);
+    
+    /* ========== OVERLAYS E TRANSPARÊNCIAS ========== */
+    --overlay-escuro: rgba(0, 0, 0, 0.8);
+    --overlay-header: rgba(9, 13, 15, 0.8);
+    --overlay-claro: rgba(255, 255, 255, 0.05);
+    
+    /* Overlays com gradiente */
+    --overlay-gradiente-escuro: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.9));
+    --overlay-gradiente-claro: linear-gradient(to bottom, rgba(255,255,255,0.8), rgba(255,255,255,0.6));
+    
+    /* ========== CORES ESPECÍFICAS ========== */
+    --cor-whatsapp: #01afff;
+    --cor-whatsapp-hover: #0a4775;
+    --cor-estrela: #ffa41c;
+    --cor-sucesso: #28a745;
+    --cor-erro: #dc3545;
+    
+    /* ========== FONTES ========== */
     --fonte-principal: 'Montserrat', sans-serif;
     --fonte-secundaria: 'Segoe UI', Tahoma, Verdana, sans-serif;
-
-    /* Dimensões */
+    
+    /* ========== DIMENSÕES ========== */
     --altura-header: 4rem;
+    --altura-header-mobile: 70px;
+    --largura-maxima-container: 1200px;
+    
+    /* ========== TRANSIÇÕES ========== */
+    --transicao-padrao: all 0.3s ease;
+    --transicao-suave: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transicao-rapida: all 0.2s ease;
+    --transicao-lenta: all 0.6s ease;
+    
+    /* ========== BORDER RADIUS ========== */
+    --radius-pequeno: 8px;
+    --radius-medio: 12px;
+    --radius-grande: 15px;
+    --radius-extra: 20px;
+    --radius-completo: 50px;
+    
+    /* ========== ANIMAÇÕES ========== */
+    --animacao-fade: fadeIn 0.5s ease;
+    --animacao-slide: slideUp 0.4s ease;
+    --animacao-bounce: bounce 0.6s ease;
 }
-/* #endregion */
 
+/* ========================================
+     GUIA RÁPIDO DE USO DE GRADIENTES
+   ======================================== */
+
+/* 
+TIPOS DE GRADIENTES:
+
+1. LINEAR (linha reta):
+   linear-gradient(direção, cor1, cor2, ...)
+   
+   Direções:
+   - 135deg (diagonal)
+   - to bottom (vertical)
+   - to right (horizontal)
+   - 45deg, 90deg, 180deg, etc.
+
+2. RADIAL (circular):
+   radial-gradient(forma at posição, cor1, cor2, ...)
+   
+   Exemplos:
+   - radial-gradient(circle at center, #01afff, #0891d4)
+   - radial-gradient(ellipse at top left, #fff, #eee)
+
+EXEMPLOS PRÁTICOS:
+
+// Gradiente diagonal suave
+--bg-servicos: linear-gradient(135deg, #e0f7fa, #ffffff);
+
+// Gradiente vertical dramático
+--bg-contato: linear-gradient(to bottom, #000000, #1e2d38, #2c3f4d);
+
+// Gradiente horizontal vibrante
+--bg-hero: linear-gradient(to right, #01afff, #5dd5ff, #01afff);
+
+// Gradiente com múltiplas cores
+--bg-proposta: linear-gradient(135deg, #1a2a35 0%, #2c3f4d 50%, #01afff 100%);
+
+// Gradiente radial (circular)
+--bg-dashboard: radial-gradient(circle at top, #2c3f4d, #0d1117);
+
+// Gradiente com transparência
+--overlay-gradiente: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+
+DICA PRO:
+Combine gradientes com imagens usando múltiplos backgrounds no CSS!
+background: var(--gradiente-primario), url('imagem.jpg');
+*/
