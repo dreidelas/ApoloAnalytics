@@ -475,17 +475,107 @@
 }
 
 /* ========== SEÇÃO SOBRE ========== */
-.about {
-    background: var(--bg-card-claro);  /* ← Suporta gradiente! */
-    border-radius: var(--radius-grande);
-    padding: 3rem;
-    border: 2px solid var(--borda-clara);
+.about-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
 }
 
-.about p {
+.about-image {
+    position: relative;
+    border-radius: var(--radius-extra);
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(1, 175, 255, 0.2);
+}
+
+.about-image::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 200px;
+    height: 200px;
+    background: var(--gradiente-acento);
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--radius-extra);
+    transition: transform 0.5s ease;
+}
+
+.about-image:hover img {
+    transform: scale(1.05);
+}
+
+.about-content {
+    padding: 2rem 0;
+}
+
+.about-tag {
+    display: inline-block;
+    background: linear-gradient(135deg, rgba(1, 175, 255, 0.1), rgba(1, 175, 255, 0.2));
+    color: var(--cor-acento);
+    padding: 0.5rem 1.5rem;
+    border-radius: var(--radius-completo);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--borda-acento-transparente);
+}
+
+.about-content h2 {
+    font-size: 2.5rem;
+    color: var(--cor-texto-branco);
+    margin-bottom: 2rem;
+    line-height: 1.2;
+    text-align: left;
+}
+
+.about-content p {
     font-size: 1.1rem;
-    margin-bottom: 1rem;
-    opacity: 0.9;
+    line-height: 1.8;
+    color: var(--cor-texto-claro);
+    margin-bottom: 1.5rem;
+}
+
+/* Responsivo Mobile */
+@media (max-width: 768px) {
+    .about-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .about-image::before {
+        width: 150px;
+        height: 150px;
+        top: -15px;
+        left: -15px;
+    }
+    
+    .about-content {
+        padding: 0;
+    }
+    
+    .about-content h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .about-tag {
+        display: block;
+        text-align: center;
+        margin: 0 auto 1.5rem;
+        width: fit-content;
+    }
 }
 
 /* ========== FORMULÁRIO DE CONTATO ========== */
