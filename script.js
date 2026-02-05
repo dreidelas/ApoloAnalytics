@@ -229,3 +229,103 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+// ========================================
+// LAZY LOAD MANUAL DO DASHBOARD
+// ========================================
+
+/**
+ * Função para carregar o dashboard do Looker Studio
+ * Chamada quando o usuário clica no botão
+ */
+function loadDashboard() {
+    const placeholder = document.getElementById('dashboard-placeholder');
+    const button = placeholder.querySelector('.dashboard-load-btn');
+    
+    if (!placeholder) {
+        console.error('Dashboard placeholder não encontrado');
+        return;
+    }
+    
+    // Guarda a posição atual do scroll
+    const scrollPosition = window.scrollY;
+    
+    // Adiciona classe de loading
+    placeholder.classList.add('dashboard-loading');
+    
+    // Desabilita o botão temporariamente
+    if (button) {
+        button.disabled = true;
+        button.innerHTML = '<span>Carregando...</span>';
+    }
+    
+    // Pequeno delay para feedback visual
+    setTimeout(() => {
+        // Cria o iframe
+        const iframe = document.createElement('iframe');
+        iframe.className = 'looker-iframe';
+        iframe.src = 'https://lookerstudio.google.com/embed/reporting/fc49fdb9-f271-4463-8382-59490d2a7818/page/PrFhF';
+        iframe.frameBorder = '0';
+        iframe.style.border = '0';
+        iframe.allowFullscreen = true;
+        iframe.setAttribute('sandbox', 'allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox');
+        iframe.setAttribute('tabindex', '-1');
+        iframe.setAttribute('loading', 'eager');
+        
+        // Previne auto-scroll quando o iframe carregar
+        iframe.addEventListener('load', () => {
+            // Restaura a posição do scroll se mudou
+            const currentScroll = window.scrollY;
+            if (Math.abs(currentScroll - scrollPosition) > 50) {
+                window.scrollTo({
+                    top: scrollPosition,
+                    behavior: 'instant'
+                });
+            }
+            
+            // Remove classe de loading
+            placeholder.classList.remove('dashboard-loading');
+        });
+        
+        // Previne foco automático
+        iframe.addEventListener('focus', (e) => {
+            e.preventDefault();
+            iframe.blur();
+        });
+        
+        // Substitui o conteúdo do placeholder pelo iframe
+        placeholder.innerHTML = '';
+        placeholder.appendChild(iframe);
+        
+    }, 300); // 300ms de delay para feedback visual
+}
+
+/**
+ * Auto-load opcional quando a seção fica visível
+ * Descomente o código abaixo se quiser que carregue automaticamente
+ */
+/*
+const dashboardAutoLoad = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const btn = entry.target.querySelector('.dashboard-load-btn');
+            if (btn && !btn.disabled) {
+                // Auto-clica após 1 segundo de visibilidade
+                setTimeout(() => {
+                    btn.click();
+                }, 1000);
+                dashboardAutoLoad.unobserve(entry.target);
+            }
+        }
+    });
+}, {
+    threshold: 0.3,
+    rootMargin: '0px'
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const placeholder = document.getElementById('dashboard-placeholder');
+    if (placeholder) {
+        dashboardAutoLoad.observe(placeholder);
+    }
+});
+*/
