@@ -1,4 +1,8 @@
-/* #region ========== CONTAINERS DE SEÇÕES ========== */
+/* ========================================
+   LAYOUT - CONTAINERS E SEÇÕES
+   ======================================== */
+
+/* ========== CONTAINERS DE SEÇÕES ========== */
 section:not(.hero) {
     width: 100%;
     padding: 80px 0;
@@ -6,31 +10,54 @@ section:not(.hero) {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: var(--largura-maxima-container);
     margin: 0 auto;
     padding: 4rem;
 }
 
-/* Definição de Cores de Fundo */
-#proposta { background-color: var(--cor-intermediario); } 
-#servicos { background-color: #f5fdff; }
-#precos   { background-color: var(--cor-secundaria); }
-#sobre    { background-color: var(--cor-primaria); }
-#contato  { background-color: #1e2d38; }
+/* ========== BACKGROUNDS DAS SEÇÕES ========== */
+/* IMPORTANTE: Para alterar a cor de uma seção, edite apenas variables.css */
 
-/* Cores de Texto (Agrupadas por similaridade) */
+#proposta { 
+    background: var(--bg-proposta);
+}
+
+#servicos { 
+    background: var(--bg-servicos);
+}
+
+#dashboard {
+    background: var(--bg-dashboard);
+}
+
+#precos {
+    background: var(--bg-precos);
+}
+
+#sobre {
+    background: var(--bg-sobre);
+}
+
+#depoimentos {
+    background: var(--bg-depoimentos);
+}
+
+#contato {
+    background: var(--bg-contato);
+}
+
+/* ========== CORES DE TEXTO DAS SEÇÕES ========== */
 #servicos h2,
 #precos h2,
 #servicos .service-card h3 {
-    color: var(--cor-primaria);
+    color: var(--cor-texto-escuro);
 }
 
 #servicos .service-card p {
-    color: #3a4f5e;
+    color: var(--cor-texto-medio);
 }
-/* #endregion */
 
-/* #region ========== GRIDS E ALINHAMENTOS GERAIS ========== */
+/* ========== GRIDS E ALINHAMENTOS ========== */
 .services {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -43,4 +70,3 @@ section:not(.hero) {
     gap: 2rem;
     margin-top: 2rem;
 }
-/* #endregion */
