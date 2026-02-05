@@ -723,16 +723,131 @@ footer p {
     max-height: 1000px;
     border-radius: 10px;
     display: block;
+    pointer-events: auto;
+    scroll-margin-top: 100px;
+}
+
+.looker-iframe:focus {
+    outline: none;
 }
 
 .dashboard-container {
-    background: var(--bg-card-branco);  /* ← Suporta gradiente! */
+    background: var(--bg-card-branco);
     border-radius: var(--radius-grande);
     padding: 1.5rem;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     margin: 0 auto 2rem;
     max-width: 95%;
     border: 2px solid var(--borda-clara);
+    scroll-margin-top: var(--altura-header);
+    min-height: 400px;
+}
+
+/* Estilo do Placeholder/Loader */
+.dashboard-loader {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(1, 175, 255, 0.05), rgba(1, 175, 255, 0.1));
+    border-radius: var(--radius-medio);
+    border: 2px dashed var(--borda-acento-transparente);
+}
+
+.loader-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+.dashboard-loader h3 {
+    color: var(--cor-texto-escuro);
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.dashboard-loader p {
+    color: var(--cor-texto-medio);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.dashboard-load-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.dashboard-load-btn svg {
+    transition: transform 0.3s ease;
+}
+
+.dashboard-load-btn:hover svg {
+    transform: translateX(5px);
+}
+
+/* Estado de carregamento */
+.dashboard-loading {
+    position: relative;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.dashboard-loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    margin: -25px 0 0 -25px;
+    border: 4px solid var(--cor-acento);
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsivo Mobile */
+@media (max-width: 768px) {
+    .dashboard-loader {
+        padding: 3rem 1.5rem;
+    }
+    
+    .loader-icon {
+        font-size: 3rem;
+    }
+    
+    .dashboard-loader h3 {
+        font-size: 1.3rem;
+    }
+    
+    .dashboard-loader p {
+        font-size: 1rem;
+    }
+    
+    .dashboard-load-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
 }
 
 /* ========== SEÇÃO DEPOIMENTOS ========== */
