@@ -117,7 +117,34 @@ const posts = [
     `
 }
     ,
+{
+    id: 4, // Incrementar sempre
+    title: "E se a Inteligência Artificial produzir relatórios dos dados da sua empresa",
+    excerpt: "É possível deixar essa função, de criar relatórios, para a IA?",
+    category: "analise-dados", // Opções: bi, analise-dados, tutoriais, cases
+    categoryName: "Análise de Dados", // Nome completo da categoria
+    date: "06 Fev, 2026", // Exemplo: "15 Jan, 2026"
+    readTime: "7 min", // Tempo estimado de leitura
+    slug: "Dados e IA", // URL amigável
+    image: "https://media.istockphoto.com/id/2226631423/pt/foto/abstract-ai-face-with-data-flow-lines.webp?a=1&b=1&s=612x612&w=0&k=20&c=rwRFUhqhV2lugc1rSiNEXMzSXhjhss01c74RTTlXuno=", // URL da imagem
+    content: `
+        <h2>É possível deixar essa função, de criar relatórios, para a IA?</h2>
+        <article>
+    <p>
+       A resposta é sim, mas calma lá que existem alguns poréns.
+
+       Para relatórios curtos onde se deseja informações com grau menor de complexidade ,como faturamento e lucro, por exemplo, quando bem configurada a IA irá realizar com excelência a demanda, no entanto para relatórios que contenham análises mais complexas a IA deixa de ser a protagonista e se torna uma espécie de suporte para o analista.
+
+    <p>
+        Mas, se o benefício é tão claro, por que tantas empresas ainda estão "travadas"? A matéria aponta barreiras reais que enfrentamos no dia a dia da consultoria:
+    </p> 
+        Mesmo utilizando a IA a presença de um especialista se faz necessária, conte com a Apolo nessa jornada.
+    </p>
+</article>
+        
     
+    `
+}    
 ];
 
 // ========================================
