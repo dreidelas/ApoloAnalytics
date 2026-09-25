@@ -14,32 +14,25 @@ const posts = [
         date: "23 Jan, 2026",
         readTime: "8 min",
         slug: "Data-Driven e Judiciário",
-        image: "https://media.istockphoto.com/id/2235904794/pt/foto/senior-project-manager-using-scrum-software.webp?a=1&b=1&s=612x612&w=0&k=20&c=0hlABYeUCjh7yyOQtP39PLfJSX0FyWW9OLDMsb7pJCo=",
+        image: "img/capa-judiciario.jpg",
         content: `
             <h2>Introdução</h2>
-            <p>O poder judiciário de santa catarina decidiu aplicar a 
-            cultura Data-Driven na gestão do órgão, a iniciativa faz
-             parte do projeto Poder Judiciário do Amanhã, e os efeitos 
-             dessa medida já são perceptíveis como aponta o presidente
-              do TJSC, Francisco Oliveira Neto, que ao falar dos resultados 
-              da atual gestão destacou que o acervo processual da corte caiu 
-              de 105 mil para 69 mil em aproximadamente um ano. 
-              E mencionou que o resultado apenas foi possível 
-              por conta do uso inteligente de dados
-               “ A decisão mais acertada foi criar as câmaras de
-                enfrentamento de acervo, o que só foi possível porque
-                 soubemos olhar para frente e agir com base em dados concretos”,
-                  afirmou. 
+            <p>
+                O Poder Judiciário de Santa Catarina decidiu aplicar a cultura Data-Driven na gestão do órgão.
+                A iniciativa faz parte do projeto Poder Judiciário do Amanhã, e os efeitos dessa medida já são
+                perceptíveis, como aponta o presidente do TJSC, Francisco Oliveira Neto. Ao falar dos resultados
+                da atual gestão, ele destacou que o acervo processual da corte caiu de 105 mil para 69 mil
+                processos em aproximadamente um ano, e mencionou que o resultado só foi possível por conta do
+                uso inteligente de dados: “A decisão mais acertada foi criar as câmaras de enfrentamento de
+                acervo, o que só foi possível porque soubemos olhar para frente e agir com base em dados
+                concretos”, afirmou.
             </p>
-            
-            </p> A cultura data driven é fundamental para
-             a sobrevivência da eficiência tanto dentro de 
-             um órgão ou empresa, deixar de basear decisões
-              em “Eu acho”, para guiar se através de informações e 
-              dados, deixou há tempos de ser opção e se tornou o 
-              básico.</p> 
 
-        
+            <p>
+                A cultura data-driven é fundamental para a eficiência de qualquer órgão ou empresa. Deixar de
+                basear decisões em “eu acho” para se guiar por informações e dados deixou há tempos de ser
+                opção e se tornou o básico.
+            </p>
         `
     },
     
@@ -89,7 +82,7 @@ const posts = [
     date: "29 Jan, 2026", // Exemplo: "15 Jan, 2026"
     readTime: "7 min", // Tempo estimado de leitura
     slug: "BI e IA no Varejo", // URL amigável
-    image: "https://plus.unsplash.com/premium_vector-1725937278377-f46cf5a648ec?q=80&w=851&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // URL da imagem
+    image: "img/capa-bi-ia-varejo.jpg", // URL da imagem
     content: `
         <h2>No varejo global, adiar decisões já custa mais caro do que investir em tecnologia</h2>
         <article>
@@ -126,23 +119,24 @@ const posts = [
     date: "06 Fev, 2026", // Exemplo: "15 Jan, 2026"
     readTime: "7 min", // Tempo estimado de leitura
     slug: "Dados e IA", // URL amigável
-    image: "https://media.istockphoto.com/id/2226631423/pt/foto/abstract-ai-face-with-data-flow-lines.webp?a=1&b=1&s=612x612&w=0&k=20&c=rwRFUhqhV2lugc1rSiNEXMzSXhjhss01c74RTTlXuno=", // URL da imagem
+    image: "img/capa-ia-relatorios.jpg", // URL da imagem
     content: `
         <h2>É possível deixar essa função, de criar relatórios, para a IA?</h2>
         <article>
     <p>
-       A resposta é sim, mas calma lá que existem alguns poréns.
-
-       Para relatórios curtos onde se deseja informações com grau menor de complexidade ,como faturamento e lucro, por exemplo, quando bem configurada a IA irá realizar com excelência a demanda, no entanto para relatórios que contenham análises mais complexas a IA deixa de ser a protagonista e se torna uma espécie de suporte para o analista.
+        A resposta é sim, mas calma lá que existem alguns poréns.
+    </p>
 
     <p>
-        Mas, se o benefício é tão claro, por que tantas empresas ainda estão "travadas"? A matéria aponta barreiras reais que enfrentamos no dia a dia da consultoria:
-    </p> 
-        Mesmo utilizando a IA a presença de um especialista se faz necessária, conte com a Apolo nessa jornada.
+        Para relatórios curtos, com informações de menor complexidade, como faturamento e lucro, a IA,
+        quando bem configurada, realiza a demanda com excelência. No entanto, em relatórios que contêm
+        análises mais complexas, a IA deixa de ser a protagonista e se torna uma espécie de suporte para o analista.
+    </p>
+
+    <p>
+        Mesmo utilizando a IA, a presença de um especialista se faz necessária. Conte com a Apolo nessa jornada.
     </p>
 </article>
-        
-    
     `
 }    
 ];

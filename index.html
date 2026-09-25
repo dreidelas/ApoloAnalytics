@@ -12,8 +12,15 @@
         <meta property="og:title" content="Apolo Analytics – Inteligência de Dados">
         <meta property="og:description" content="Dados confiáveis, análises claras e decisões melhores.">
         <meta property="og:type" content="website">
-        <meta property="og:url" content="https://www.seusite.com">
-        <meta property="og:image" content="https://www.seusite.com/og-image.png">
+        <meta property="og:locale" content="pt_BR">
+        <meta property="og:site_name" content="Apolo Analytics">
+        <meta property="og:url" content="https://apoloanalytics.com.br/">
+        <meta property="og:image" content="https://apoloanalytics.com.br/og-image.png">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <meta property="og:image:alt" content="Apolo Analytics – Consultoria em Dados e BI">
+        <meta name="twitter:card" content="summary_large_image">
+        <link rel="canonical" href="https://apoloanalytics.com.br/">
         <!-- FIM: METAS E LINKS -->
 
         <!-- INÍCIO: Google Tag (Analytics) -->
@@ -48,12 +55,14 @@
                     <li><a href="blog/index.html" data-i18n="nav_blog">Blog</a></li>
                     <li><a href="#precos" data-i18n="nav_precos">Preços</a></li>
                     <li><a href="#contato" data-i18n="nav_contato">Contato</a></li>
+                    <!-- Seletor de idioma oculto até a tradução EN estar completa (ver IDIOMA_EN_ATIVO em script.js)
                     <li class="lang-item">
                         <select id="language-switcher" class="lang-select">
                             <option value="pt-BR">PT</option>
                             <option value="en">EN</option>
                         </select>
                     </li>
+                    -->
                 </ul>
             </nav>
         </header>
@@ -82,21 +91,6 @@
                     Trabalhamos <span class="destaque-primario">lado a lado</span> com você, 
                     do diagnóstico até a implementação.
                 </p>
-
-                <div class="intro-stats">
-                    <div class="stat-item">
-                        <span class="stat-numero">5</span>
-                        <span class="stat-label" data-i18n="proposta_estatistica_etapas">Etapas</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-numero">1</span>
-                        <span class="stat-label" data-i18n="proposta_estatistica_objetivo">Objetivo</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-numero">∞</span>
-                        <span class="stat-label" data-i18n="proposta_estatistica_resultados">Resultados</span>
-                    </div>
-                </div>
             </div>
 
                 <div class="proposta-timeline">
@@ -161,29 +155,29 @@
                 <div class="services">
                     <div class="service-card">
                         <h3>
-                            <img src="grafic.png" alt="Ícone de Gráfico" class="icone-titulo"> 
+                            <img src="grafic.png" alt="" class="icone-titulo"> 
                             <span data-i18n="servico_analise_exploratoria_titulo">Análise Exploratória</span>
                         </h3>
                         <p data-i18n="servico_analise_exploratoria">Descubra padrões e insights ocultos nos seus dados através de análises estatísticas avançadas e visualizações intuitivas.</p>
                     </div>
                     <div class="service-card">
-                        <h3 data-i18n="servico_benchmark_titulo"><img src="targeting.png" alt="Ícone de BI" class="icone-titulo"> Benchmark</h3>
+                        <h3><img src="targeting.png" alt="" class="icone-titulo"> <span data-i18n="servico_benchmark_titulo">Benchmark</span></h3>
                         <p data-i18n="servico_benchmark">Mapeamos o cenário competitivo e identificamos as melhores práticas do setor. Garanta que sua empresa atue com visão completa e inteligência de mercado.</p>
                     </div>
                     <div class="service-card">
-                        <h3 data-i18n="servico_modelagem_preditiva_titulo"><img src="analysis.png" alt="Ícone de Modelagem" class="icone-titulo"> Modelagem Preditiva</h3>
+                        <h3><img src="analysis.png" alt="" class="icone-titulo"> <span data-i18n="servico_modelagem_preditiva_titulo">Modelagem Preditiva</span></h3>
                         <p data-i18n="servico_modelagem_preditiva">Utilize machine learning para prever tendências, comportamentos e resultados futuros do seu negócio.</p>
                     </div>
                     <div class="service-card">
-                        <h3><img src="database.png" alt="Ícone de Consultoria" class="icone-titulo"> ETL e Integração</h3>
+                        <h3><img src="database.png" alt="" class="icone-titulo"> <span data-i18n="servico_etl_integracao_titulo">ETL e Integração</span></h3>
                         <p data-i18n="servico_etl_integracao">Automatize processos de coleta, transformação e carregamento de dados de múltiplas fontes.</p>
                     </div>
                     <div class="service-card">
-                        <h3><img src="empathy.png" alt="Ícone de ETL" class="icone-titulo"> Apoio Estratégico</h3>
+                        <h3><img src="empathy.png" alt="" class="icone-titulo"> <span data-i18n="servico_apoio_estrategico_titulo">Apoio Estratégico</span></h3>
                         <p data-i18n="servico_apoio_estrategico">Orientação especializada para implementar uma cultura data-driven na sua organização.</p>
                     </div>
                     <div class="service-card">
-                        <h3><img src="team.png" alt="Ícone de Otimização" class="icone-titulo"> Otimização de Processos</h3>
+                        <h3><img src="team.png" alt="" class="icone-titulo"> <span data-i18n="servico_otimizacao_processos_titulo">Otimização de Processos</span></h3>
                         <p data-i18n="servico_otimizacao_processos">Identifique gargalos e oportunidades de melhoria através da análise detalhada de processos.</p>
                     </div>
                 </div>
@@ -197,7 +191,7 @@
         <h2>
             <img src="business-intelligence.png" alt="Ícone Dashboard" class="icone-titulo"> Dashboard Interativo
         </h2>
-        <p class="dashboard-intro" data-i18n="BI">Explore o BI (Business Intelligence) elaborado com dados reais de uma planilha de CRM.</p>
+        <p class="dashboard-intro" data-i18n="BI">Explore um exemplo de BI (Business Intelligence) construído a partir de uma base de CRM.</p>
         
         <!-- Placeholder do Dashboard -->
         <div id="dashboard-placeholder" class="dashboard-container">
@@ -236,7 +230,7 @@
                     </div>
 
                     <div class="pricing-card featured">
-                        <span class="badge">Oportunidade!!</span>
+                        <span class="badge">Recomendado</span>
                         <h3>Profissional</h3>
                         <p class="description">Para empresas que buscam insights avançados e dashboards que fogem do genérico.</p>
                         <ul class="features-list">
@@ -251,7 +245,7 @@
                         <h3>Empresarial</h3>
                         <p class="description" data-i18n="plano_empresarial_descricao">Solução completa para dados complexos e situações específicas.</p>
                         <ul class="features-list">
-                            <li data-i18n="plano_empresarial_equipe_exclusiva">Equipe Exclusiva</li>
+                            <li data-i18n="plano_empresarial_projetos_sob_medida">Projetos sob medida</li>
                             <li data-i18n="plano_empresarial_consultoria_dedicada">Consultoria dedicada</li>
                             <li data-i18n="plano_empresarial_agenda_prioritaria">Agenda Prioritária</li>
                         </ul>
@@ -300,105 +294,6 @@
 </section>
 <!-- FIM: SOBRE -->
 
-        <!-- INÍCIO: DEPOIMENTOS -->
-<section id="depoimentos">
-    <div class="container">
-        <div class="depoimentos-header">
-            <span class="depoimentos-tag" data-i18n="depoimentos_tag">Casos de Sucesso</span>
-            <h2 data-i18n="depoimentos_titulo">Clientes que Transformaram Dados em Resultados</h2>
-            <p class="depoimentos-subtitle" data-i18n="depoimentos_subtitulo">Veja como ajudamos empresas a tomar decisões mais inteligentes</p>
-        </div>
-        
-        <div class="depoimentos-grid">
-            <div class="depoimento-card">
-                <div class="depoimento-rating">
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                </div>
-                <p class="depoimento-texto">
-                    "Excelente trabalho! Transformaram nossos dados em Painéis úteis e valiosos. A clareza nas análises nos permitiu identificar oportunidades que estavam invisíveis."
-                </p>
-                <div class="depoimento-autor">
-                    <div class="autor-avatar">
-                        <span>HT</span>
-                    </div>
-                    <div class="autor-info">
-                        <span class="autor-nome">Henrique Teodor Lima</span>
-                        <span class="autor-cargo">Gerente de Operações</span>
-                    </div>
-                </div>
-                <div class="depoimento-stats">
-                    <div class="stat">
-                        <span class="stat-valor">35%</span>
-                        <span class="stat-descricao">Aumento em eficiência</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="depoimento-card featured-depoimento">
-                <div class="depoimento-badge">Destaque</div>
-                <div class="depoimento-rating">
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                </div>
-                <p class="depoimento-texto">
-                    "Profissionais competentes e atenciosos. O suporte durante todo o processo foi excepcional, e os insights gerados mudaram nossa estratégia de negócio."
-                </p>
-                <div class="depoimento-autor">
-                    <div class="autor-avatar">
-                        <span>EN</span>
-                    </div>
-                    <div class="autor-info">
-                        <span class="autor-nome">Eduarda Nogueira</span>
-                        <span class="autor-cargo">Analista Senior de Dados</span>
-                    </div>
-                </div>
-                <div class="depoimento-stats">
-                    <div class="stat">
-                        <span class="stat-valor">50%</span>
-                        <span class="stat-descricao">Redução em tempo de análise</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="depoimento-card">
-                <div class="depoimento-rating">
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                </div>
-                <p class="depoimento-texto">
-                    "A Apolo Analytics não apenas entregou dashboards, mas nos ensinou a cultura data-driven. Agora tomamos decisões baseadas em fatos, não em achismos."
-                </p>
-                <div class="depoimento-autor">
-                    <div class="autor-avatar">
-                        <span>MS</span>
-                    </div>
-                    <div class="autor-info">
-                        <span class="autor-nome">Marcos Silva</span>
-                        <span class="autor-cargo">CEO, TechStart</span>
-                    </div>
-                </div>
-                <div class="depoimento-stats">
-                    <div class="stat">
-                        <span class="stat-valor">3x</span>
-                        <span class="stat-descricao">ROI em 6 meses</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- FIM: DEPOIMENTOS -->
-
         <!-- INÍCIO: CONTATO -->
         <section id="contato">
             <div class="container">
@@ -430,17 +325,9 @@
                     <button type="submit" class="cta-button">
                         Enviar Mensagem
                     </button>
-
-                    <div class="mensagem-sucesso" style="display:none;">
-                        Mensagem enviada com sucesso!
-                    </div>
                 </form>
 
-                <!-- INÍCIO: Estilo inline (mensagem de sucesso) -->
-                <div id="mensagem-sucesso" style="display:none; color:#ebf1ea; margin-top:20px; font-weight:bold; text-align:center; font-size:larger;">
-                    Obrigado! Sua mensagem foi enviada com sucesso.
-                </div>
-                <!-- FIM: Estilo inline (mensagem de sucesso) -->
+                <div class="form-message" role="status" aria-live="polite" hidden></div>
             </div>
         </section>
         <!-- FIM: CONTATO -->
@@ -472,9 +359,10 @@
         <!-- FIM: RODAPÉ -->
 
         <!-- INÍCIO: SCRIPTS -->
-        <script src="https://unpkg.com/i18next/dist/umd/i18next.min.js"></script>
-        <script src="https://unpkg.com/loc-i18next/dist/umd/loc-i18next.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/i18next@26.4.2/dist/umd/i18next.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/loc-i18next@0.1.6/dist/umd/loc-i18next.min.js"></script>
 
+        <script src="form-contato.js"></script>
         <script src="script.js"></script>
         <!-- FIM: SCRIPTS -->
     </body>
