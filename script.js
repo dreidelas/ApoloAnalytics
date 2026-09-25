@@ -1,3 +1,15 @@
+// ========== CONFIGURAÇÃO COMERCIAL (edite aqui) ==========
+// Preço "a partir de" de cada oferta. Deixe null para mostrar "Sob consulta".
+// Exemplo: painel: 'R$ 1.500'
+const PRECOS = {
+    painel: null,
+    automacao: null,
+    acompanhamento: null, // valor mensal; o site acrescenta "/mês"
+};
+
+// Vagas restantes no programa Clientes Fundadores (0 esconde a seção)
+const VAGAS_FUNDADORES = 3;
+
 // ========== CONFIGURAÇÃO DE TRADUÇÃO (i18next) ==========
 const resources = {
     "pt-BR": {
@@ -33,6 +45,9 @@ const resources = {
             "servico_benchmark":"Mapeamos o cenário competitivo e identificamos as melhores práticas do setor. Garanta que sua empresa atue com visão completa e inteligência de mercado.",
             "servico_modelagem_preditiva_titulo": "Modelagem Preditiva",
             "servico_modelagem_preditiva":"Utilize machine learning para prever tendências, comportamentos e resultados futuros do seu negócio.",
+            "servico_etl_integracao_titulo": "ETL e Integração",
+            "servico_apoio_estrategico_titulo": "Apoio Estratégico",
+            "servico_otimizacao_processos_titulo": "Otimização de Processos",
             "servico_etl_integracao":"Automatize processos de coleta, transformação e carregamento de dados de múltiplas fontes.",
             "servico_apoio_estrategico":"Orientação especializada para implementar uma cultura data-driven na sua organização.",
             "servico_otimizacao_processos":"Identifique gargalos e oportunidades de melhoria através da análise detalhada de processos.",
@@ -45,8 +60,7 @@ const resources = {
 "sobre_paragrafo_2": "Na Apolo Analytics, acreditamos que enxergar é muito mais do que apenas ver. É compreender profundamente, é descobrir o que antes estava oculto, é revelar o verdadeiro potencial de um negócio. Nossa missão é simples e poderosa: transformar a forma de enxergar as empresas através dos dados.",
 "sobre_paragrafo_3": "Nosso compromisso vai além de fornecer tecnologia ou consultoria. Estamos comprometidos em transformar a maneira como você vê seu negócio. Queremos que você descubra novas oportunidades, tome decisões mais informadas e, acima de tudo, enxergue o caminho para o crescimento com mais clareza.",
 
-"BI":"Explore o BI (Business Intelligence) elaborado com dados reais de uma planilha de CRM.",
-            "BI":"Explore o BI (Business Intelligence) elaborado com dados reais de uma planilha de CRM.",
+            "BI":"Explore um exemplo de BI (Business Intelligence) construído a partir de uma base de CRM.",
             "dashboard_dica":"💡 Dica: Use os filtros interativos para explorar diferentes perspectivas dos dados"
         }
     },
@@ -83,6 +97,9 @@ const resources = {
             "servico_benchmark": "We map the competitive landscape and identify industry best practices. Ensure your company operates with a complete vision and market intelligence.",
             "servico_modelagem_preditiva_titulo": "Predictive Modeling",
             "servico_modelagem_preditiva": "Use machine learning to predict trends, behaviors, and future results for your business.",
+            "servico_etl_integracao_titulo": "ETL and Integration",
+            "servico_apoio_estrategico_titulo": "Strategic Support",
+            "servico_otimizacao_processos_titulo": "Process Optimization",
             "servico_etl_integracao": "Automate data collection, transformation, and loading processes from multiple sources.",
             "servico_apoio_estrategico": "Specialized guidance to implement a data-driven culture in your organization.",
             "servico_otimizacao_processos": "Identify bottlenecks and improvement opportunities through detailed process analysis.",
@@ -96,9 +113,7 @@ const resources = {
 "sobre_paragrafo_2": "At Apolo Analytics, we believe that seeing is much more than just looking. It's understanding deeply, discovering what was previously hidden, revealing the true potential of a business. Our mission is simple yet powerful: to transform the way companies are seen through data.",
 "sobre_paragrafo_3": "Our commitment goes beyond providing technology or consulting. We are committed to transforming the way you see your business. We want you to discover new opportunities, make more informed decisions, and above all, see the path to growth with greater clarity.",
 
-"BI": "Explore the BI (Business Intelligence) developed with real data from a CRM spreadsheet.",
-// ... resto do código ...
-            "BI": "Explore the BI (Business Intelligence) developed with real data from a CRM spreadsheet.",
+            "BI": "Explore a sample BI (Business Intelligence) dashboard built from a CRM dataset.",
             "dashboard_dica": "💡 Tip: Use interactive filters to explore different data perspectives"
         }
     }
@@ -122,27 +137,39 @@ function atualizarTextos() {
     });
 }
 
-// Inicializa o i18next
-i18next.init({
-    lng: localStorage.getItem('userLang') || 'pt-BR',
-    resources
-}, (err, t) => {
-    atualizarTextos();
-    const switcher = document.getElementById('language-switcher');
-    if(switcher) switcher.value = i18next.language;
-});
+// Enquanto a versão em inglês não estiver completa, o site fica fixo em português
+// (o seletor de idioma também está comentado no index.html)
+const IDIOMA_EN_ATIVO = false;
 
-// Evento do Seletor de Idioma
-document.addEventListener('change', (e) => {
-    if (e.target.id === 'language-switcher') {
-        const novoIdioma = e.target.value;
-        i18next.changeLanguage(novoIdioma, () => {
-            atualizarTextos();
-            localStorage.setItem('userLang', novoIdioma);
-            document.documentElement.lang = novoIdioma;
-        });
-    }
-});
+// Inicializa o i18next. Se a biblioteca não carregar (CDN fora do ar),
+// o site continua em português e o restante do script segue funcionando.
+if (window.i18next && window.locI18next) {
+    const idiomaSalvo = IDIOMA_EN_ATIVO ? localStorage.getItem('userLang') : null;
+
+    i18next.init({
+        lng: idiomaSalvo || 'pt-BR',
+        resources
+    }, () => {
+        atualizarTextos();
+        document.documentElement.lang = i18next.language;
+        const switcher = document.getElementById('language-switcher');
+        if (switcher) switcher.value = i18next.language;
+    });
+
+    // Evento do Seletor de Idioma
+    document.addEventListener('change', (e) => {
+        if (e.target.id === 'language-switcher') {
+            const novoIdioma = e.target.value;
+            i18next.changeLanguage(novoIdioma, () => {
+                atualizarTextos();
+                localStorage.setItem('userLang', novoIdioma);
+                document.documentElement.lang = novoIdioma;
+            });
+        }
+    });
+} else {
+    console.warn('i18next não carregou; exibindo o site em português.');
+}
 
 // ========== MENU HAMBÚRGUER ==========
 const hamburger = document.getElementById('hamburger');
@@ -176,8 +203,9 @@ const navLinksAnchor = document.querySelectorAll('a[href^="#"]');
 
 navLinksAnchor.forEach((anchor) => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault();
         const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        e.preventDefault();
         const target = document.querySelector(targetId);
 
         if (target) {
@@ -189,46 +217,61 @@ navLinksAnchor.forEach((anchor) => {
     });
 });
 
-// ========== FORMULÁRIO GOOGLE ==========
-document.addEventListener('DOMContentLoaded', () => {
-    const formularios = document.querySelectorAll('.google-form');
+// Formulário de contato: ver form-contato.js
 
-    if (formularios.length === 0) return;
+// ========== OFERTAS: PREÇOS ==========
+document.querySelectorAll('[data-preco]').forEach((elemento) => {
+    const valor = PRECOS[elemento.dataset.preco];
+    if (!valor) return;
+    const sufixo = elemento.dataset.preco === 'acompanhamento' ? '<span>/mês</span>' : '';
+    elemento.innerHTML = `<span>a partir de</span> ${valor}${sufixo}`;
+});
 
-    formularios.forEach((formulario) => {
-        formulario.addEventListener('submit', (e) => {
-            e.preventDefault();
-
-            const btnEnviar = formulario.querySelector('button[type="submit"]');
-            const msgSucesso = formulario.querySelector('.mensagem-sucesso');
-
-            if (btnEnviar) {
-                // Aqui usamos o i18next para o feedback do botão também!
-                btnEnviar.innerText = i18next.language === 'en' ? 'Sending...' : 'Enviando...';
-                btnEnviar.disabled = true;
-            }
-
-            const dados = new FormData(formulario);
-
-            fetch(formulario.action, {
-                method: 'POST',
-                body: dados,
-                mode: 'no-cors',
-            })
-                .then(() => {
-                    formulario.style.display = 'none';
-                    if (msgSucesso) msgSucesso.style.display = 'block';
-                })
-                .catch((error) => {
-                    console.error('Erro!', error.message);
-                    if (btnEnviar) {
-                        btnEnviar.innerText = 'Erro';
-                        btnEnviar.disabled = false;
-                    }
-                });
-        });
+// Botões das ofertas já deixam a necessidade selecionada no formulário
+document.querySelectorAll('[data-necessidade]').forEach((botao) => {
+    botao.addEventListener('click', () => {
+        const campo = document.getElementById('necessidade');
+        if (campo) campo.value = botao.dataset.necessidade;
     });
 });
+
+// ========== CLIENTES FUNDADORES: VAGAS ==========
+const secaoFundadores = document.getElementById('fundadores');
+if (secaoFundadores) {
+    if (VAGAS_FUNDADORES <= 0) {
+        secaoFundadores.hidden = true;
+    } else {
+        document.getElementById('vagasFundadores').textContent = VAGAS_FUNDADORES;
+    }
+}
+
+// ========== CALCULADORA DE RELATÓRIOS MANUAIS ==========
+const calcForm = document.getElementById('calcForm');
+if (calcForm) {
+    const moeda = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL', maximumFractionDigits: 0 });
+    const numero = (id) => Math.max(0, parseFloat(document.getElementById(id).value.replace(',', '.')) || 0);
+    const calcCta = document.getElementById('calcCta');
+
+    const atualizarCalculadora = () => {
+        const horasSemana = numero('calcHoras') * numero('calcPessoas');
+        const custoHora = numero('calcCusto');
+        const horasMes = Math.round(horasSemana * 52 / 12);
+        const custoMes = horasSemana * custoHora * 52 / 12;
+        const custoAno = horasSemana * custoHora * 52;
+
+        document.getElementById('calcHorasMes').textContent = `${horasMes.toLocaleString('pt-BR')} h`;
+        document.getElementById('calcCustoMes').textContent = moeda.format(custoMes);
+        document.getElementById('calcCustoAno').textContent = moeda.format(custoAno);
+
+        const mensagem = `Olá! Usei a calculadora do site: gastamos cerca de ${horasMes} horas por mês ` +
+            `com relatórios manuais (${moeda.format(custoAno)} por ano). Quero entender como reduzir isso.`;
+        calcCta.href = `https://wa.me/5548988769823?text=${encodeURIComponent(mensagem)}`;
+    };
+
+    calcForm.addEventListener('input', atualizarCalculadora);
+    atualizarCalculadora();
+}
+
 // ========================================
 // LAZY LOAD MANUAL DO DASHBOARD
 // ========================================

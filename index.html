@@ -4,34 +4,154 @@
         <!-- INÍCIO: METAS E LINKS -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Apolo Analytics | Consultoria em Dados e BI</title>
-        <meta name="description" content="Análise de dados, BI e analytics para empresas que precisam transformar informação em decisão.">
+        <title>Apolo Analytics | Painéis e Automação de Dados para PMEs</title>
+        <meta name="description" content="Painéis e automações de relatórios para pequenas e médias empresas. Diagnóstico gratuito, escopo e prazo definidos antes de começar.">
         <link rel="icon" type="image/x-icon" href="favicon.png">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./css/main.css">
-        <meta property="og:title" content="Apolo Analytics – Inteligência de Dados">
-        <meta property="og:description" content="Dados confiáveis, análises claras e decisões melhores.">
+        <meta property="og:title" content="Apolo Analytics – Painéis e automação de dados para PMEs">
+        <meta property="og:description" content="Chega de montar relatório no Excel toda semana. Diagnóstico gratuito de 30 minutos.">
         <meta property="og:type" content="website">
-        <meta property="og:url" content="https://www.seusite.com">
-        <meta property="og:image" content="https://www.seusite.com/og-image.png">
+        <meta property="og:locale" content="pt_BR">
+        <meta property="og:site_name" content="Apolo Analytics">
+        <meta property="og:url" content="https://apoloanalytics.com.br/">
+        <meta property="og:image" content="https://apoloanalytics.com.br/og-image.png">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <meta property="og:image:alt" content="Apolo Analytics – Consultoria em Dados e BI">
+        <meta name="twitter:card" content="summary_large_image">
+        <link rel="canonical" href="https://apoloanalytics.com.br/">
         <!-- FIM: METAS E LINKS -->
 
-        <!-- INÍCIO: Google Tag (Analytics) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-12BGLWKG5G"></script>
+        <!-- INÍCIO: Google Tag (Analytics) com Consent Mode -->
         <script>
             window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);} 
+            function gtag(){dataLayer.push(arguments);}
+            gtag('consent', 'default', {
+                analytics_storage: 'denied',
+                ad_storage: 'denied',
+                ad_user_data: 'denied',
+                ad_personalization: 'denied'
+            });
+            try {
+                if (localStorage.getItem('apoloCookies') === 'aceito') {
+                    gtag('consent', 'update', { analytics_storage: 'granted' });
+                }
+            } catch (e) {}
             gtag('js', new Date());
             gtag('config', 'G-12BGLWKG5G');
         </script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-12BGLWKG5G"></script>
         <!-- FIM: Google Tag (Analytics) -->
+
+        <!-- INÍCIO: Dados estruturados (Google e buscadores com IA) -->
+        <script type="application/ld+json">
+{
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            "name": "Apolo Analytics",
+            "url": "https://apoloanalytics.com.br/",
+            "logo": "https://apoloanalytics.com.br/logo.png",
+            "image": "https://apoloanalytics.com.br/og-image.png",
+            "description": "Painéis, automação de relatórios e análise de dados para pequenas e médias empresas.",
+            "email": "contato@apoloanalytics.com.br",
+            "telephone": "+55-48-98876-9823",
+            "areaServed": {
+                "@type": "Country",
+                "name": "Brasil"
+            },
+            "knowsAbout": [
+                "Business Intelligence",
+                "Power BI",
+                "Looker Studio",
+                "Automação de relatórios",
+                "Análise de dados"
+            ],
+            "sameAs": [
+                "https://www.instagram.com/apoloanalytics/"
+            ]
+        }
+        </script>
+        <script type="application/ld+json">
+{
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "Preciso ter os dados organizados para começar?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Não. Organizar e integrar os dados costuma ser parte do trabalho. No diagnóstico avaliamos o que você já tem (planilhas, ERP, CRM, sistema de vendas) e dizemos o que dá para fazer com isso."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Meus dados ficam seguros?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Sim. Assinamos um acordo de confidencialidade (NDA) antes de acessar qualquer informação, usamos só os acessos necessários ao projeto e seguimos a LGPD. Sempre que possível, o trabalho é feito no ambiente da sua própria empresa."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Preciso comprar Power BI ou outra ferramenta?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Não necessariamente. Indicamos a opção mais econômica para o seu caso. Muitas vezes dá para começar sem custo de licença, com Looker Studio ou Google Sheets."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Quanto custa?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Cada oferta tem escopo e prazo definidos. O valor final é confirmado na proposta, que enviamos em até 1 dia útil depois do diagnóstico gratuito."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Quanto tempo leva?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Uma automação de relatório costuma levar de 1 a 2 semanas; um painel, de 2 a 3 semanas. O prazo exato vai na proposta, junto com o escopo."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "E depois da entrega, quem mantém o painel?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Você recebe documentação e um treinamento para o time usar o painel com autonomia. Se preferir, o Acompanhamento Mensal cuida da manutenção e de novos indicadores."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Vocês emitem nota fiscal?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Estamos formalizando a empresa. Enquanto isso, atendemos com contrato de prestação de serviços e recibo. Se a sua empresa exige nota fiscal, conte no diagnóstico e combinamos a melhor forma."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Vocês atendem empresas de qualquer cidade?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Sim. Todo o atendimento é online: reuniões por vídeo e contato por WhatsApp e e-mail."
+                    }
+                }
+            ]
+        }
+        </script>
+        <!-- FIM: Dados estruturados -->
     </head>
     <body>
         <!-- INÍCIO: HEADER / NAVEGAÇÃO -->
         <header>
             <nav class="nav-container">
                 <a href="#home" class="logo">
-                    <img src="logomarca.png" alt="Logo Apolo" class="logo-img">
+                    <img src="logomarca.png" alt="Apolo Analytics" class="logo-img">
                 </a>
 
                 <div class="hamburger" id="hamburger">
@@ -41,19 +161,21 @@
                 </div>
 
                 <ul class="nav-links" id="navLinks">
-                    <li><a href="#home" data-i18n="nav_inicio">Início</a></li>
-                    <li><a href="#proposta" data-i18n="nav_proposta">Nossa Proposta</a></li>
-                    <li><a href="#servicos" data-i18n="nav_servicos">Serviços</a></li>
-                    <li><a href="#sobre" data-i18n="nav_sobre">Sobre</a></li>
-                    <li><a href="blog/index.html" data-i18n="nav_blog">Blog</a></li>
-                    <li><a href="#precos" data-i18n="nav_precos">Preços</a></li>
-                    <li><a href="#contato" data-i18n="nav_contato">Contato</a></li>
+                    <li><a href="#proposta">Como funciona</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#precos">Ofertas</a></li>
+                    <li><a href="#sobre">Quem somos</a></li>
+                    <li><a href="#faq">Dúvidas</a></li>
+                    <li><a href="blog/">Blog</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <!-- Seletor de idioma oculto até a tradução EN estar completa (ver IDIOMA_EN_ATIVO em script.js)
                     <li class="lang-item">
                         <select id="language-switcher" class="lang-select">
                             <option value="pt-BR">PT</option>
                             <option value="en">EN</option>
                         </select>
                     </li>
+                    -->
                 </ul>
             </nav>
         </header>
@@ -62,9 +184,14 @@
         <!-- INÍCIO: HERO -->
         <section id="home" class="hero">
             <div class="container hero-content">
-                <h1>Apolo Analytics</h1>
-                <p data-i18n="hero_subtitulo">Transforme dados em decisões estratégicas para o seu negócio</p>
-                <button class="cta-button" data-i18n="hero_btn" onclick="document.getElementById('contato').scrollIntoView()">Entre em Contato</button>
+                <span class="hero-tag">Dados para pequenas e médias empresas</span>
+                <h1>Chega de montar relatório no Excel toda semana</h1>
+                <p>Criamos painéis e automações que mostram vendas, finanças e operação da sua empresa, atualizados automaticamente. Escopo, prazo e preço definidos antes de começar.</p>
+                <div class="hero-ctas">
+                    <a href="https://wa.me/5548988769823?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20o%20diagn%C3%B3stico%20gratuito." class="cta-button js-cta-diagnostico" data-origem="hero" target="_blank" rel="noopener noreferrer">Agendar diagnóstico gratuito</a>
+                    <a href="#dashboard" class="cta-secundario">Ver painel de exemplo</a>
+                </div>
+                <p class="hero-nota">Diagnóstico de 30 minutos, online e sem compromisso</p>
             </div>
         </section>
         <!-- FIM: HERO -->
@@ -72,7 +199,7 @@
         <!-- INÍCIO: NOSSA PROPOSTA -->
         <section id="proposta">
             <div class="container">
-                <h2 data-i18n="proposta_titulo">Nossa Proposta</h2>
+                <h2>Como funciona</h2>
                 
             <div class="proposta-intro-destaque">
                 <p class="intro-texto" data-i18n="proposta_texto">
@@ -82,30 +209,15 @@
                     Trabalhamos <span class="destaque-primario">lado a lado</span> com você, 
                     do diagnóstico até a implementação.
                 </p>
-
-                <div class="intro-stats">
-                    <div class="stat-item">
-                        <span class="stat-numero">5</span>
-                        <span class="stat-label" data-i18n="proposta_estatistica_etapas">Etapas</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-numero">1</span>
-                        <span class="stat-label" data-i18n="proposta_estatistica_objetivo">Objetivo</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-numero">∞</span>
-                        <span class="stat-label" data-i18n="proposta_estatistica_resultados">Resultados</span>
-                    </div>
-                </div>
             </div>
 
                 <div class="proposta-timeline">
                     <div class="proposta-step">
                         <div class="step-number">1</div>
                         <div class="step-content">
-                            <h3 data-i18n="proposta_consulta_inicial_titulo">Consulta Inicial</h3>
-                            <p data-i18n="proposta_consulta_inicial">
-                                Reunião para compreender suas necessidades, objetivos de negócio e desafios atuais. A <strong>Apolo</strong> analisa seu contexto e identifica oportunidades de melhoria através dos dados.
+                            <h3>Diagnóstico gratuito</h3>
+                            <p>
+                                Conversa online de 30 minutos para entender seus objetivos, de onde vêm os seus dados e onde o time perde tempo hoje. Sem custo e sem compromisso.
                             </p>
                         </div>
                     </div>
@@ -113,8 +225,8 @@
                     <div class="proposta-step">
                         <div class="step-number">2</div>
                         <div class="step-content">
-                            <h3 data-i18n="proposta_diagnostico_titulo">Diagnóstico</h3>
-                            <p data-i18n="proposta_diagnostico">
+                            <h3>Análise dos dados</h3>
+                            <p >
                                 Avaliação detalhada da maturidade dos seus dados, sistemas existentes e processos. Identificamos gaps e definimos prioridades estratégicas para maximizar o retorno do investimento.
                             </p>
                         </div>
@@ -161,29 +273,29 @@
                 <div class="services">
                     <div class="service-card">
                         <h3>
-                            <img src="grafic.png" alt="Ícone de Gráfico" class="icone-titulo"> 
+                            <img src="grafic.png" alt="" class="icone-titulo"> 
                             <span data-i18n="servico_analise_exploratoria_titulo">Análise Exploratória</span>
                         </h3>
                         <p data-i18n="servico_analise_exploratoria">Descubra padrões e insights ocultos nos seus dados através de análises estatísticas avançadas e visualizações intuitivas.</p>
                     </div>
                     <div class="service-card">
-                        <h3 data-i18n="servico_benchmark_titulo"><img src="targeting.png" alt="Ícone de BI" class="icone-titulo"> Benchmark</h3>
+                        <h3><img src="targeting.png" alt="" class="icone-titulo"> <span data-i18n="servico_benchmark_titulo">Benchmark</span></h3>
                         <p data-i18n="servico_benchmark">Mapeamos o cenário competitivo e identificamos as melhores práticas do setor. Garanta que sua empresa atue com visão completa e inteligência de mercado.</p>
                     </div>
                     <div class="service-card">
-                        <h3 data-i18n="servico_modelagem_preditiva_titulo"><img src="analysis.png" alt="Ícone de Modelagem" class="icone-titulo"> Modelagem Preditiva</h3>
+                        <h3><img src="analysis.png" alt="" class="icone-titulo"> <span data-i18n="servico_modelagem_preditiva_titulo">Modelagem Preditiva</span></h3>
                         <p data-i18n="servico_modelagem_preditiva">Utilize machine learning para prever tendências, comportamentos e resultados futuros do seu negócio.</p>
                     </div>
                     <div class="service-card">
-                        <h3><img src="database.png" alt="Ícone de Consultoria" class="icone-titulo"> ETL e Integração</h3>
+                        <h3><img src="database.png" alt="" class="icone-titulo"> <span data-i18n="servico_etl_integracao_titulo">ETL e Integração</span></h3>
                         <p data-i18n="servico_etl_integracao">Automatize processos de coleta, transformação e carregamento de dados de múltiplas fontes.</p>
                     </div>
                     <div class="service-card">
-                        <h3><img src="empathy.png" alt="Ícone de ETL" class="icone-titulo"> Apoio Estratégico</h3>
+                        <h3><img src="empathy.png" alt="" class="icone-titulo"> <span data-i18n="servico_apoio_estrategico_titulo">Apoio Estratégico</span></h3>
                         <p data-i18n="servico_apoio_estrategico">Orientação especializada para implementar uma cultura data-driven na sua organização.</p>
                     </div>
                     <div class="service-card">
-                        <h3><img src="team.png" alt="Ícone de Otimização" class="icone-titulo"> Otimização de Processos</h3>
+                        <h3><img src="team.png" alt="" class="icone-titulo"> <span data-i18n="servico_otimizacao_processos_titulo">Otimização de Processos</span></h3>
                         <p data-i18n="servico_otimizacao_processos">Identifique gargalos e oportunidades de melhoria através da análise detalhada de processos.</p>
                     </div>
                 </div>
@@ -192,268 +304,382 @@
         <!-- FIM: SERVIÇOS -->
 
         <!-- INÍCIO: DASHBOARD (Looker Studio) -->
-<section id="dashboard">
-    <div class="container">
-        <h2>
-            <img src="business-intelligence.png" alt="Ícone Dashboard" class="icone-titulo"> Dashboard Interativo
-        </h2>
-        <p class="dashboard-intro" data-i18n="BI">Explore o BI (Business Intelligence) elaborado com dados reais de uma planilha de CRM.</p>
-        
-        <!-- Placeholder do Dashboard -->
-        <div id="dashboard-placeholder" class="dashboard-container">
-            <div class="dashboard-loader">
-                <div class="loader-icon"></div>
-                <h3>Dashboard Interativo</h3>
-                <p>Clique no botão abaixo para carregar o painel de Business Intelligence</p>
-                <button onclick="loadDashboard()" class="cta-button dashboard-load-btn">
-                    <span>Carregar Dashboard</span>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <polyline points="9 18 15 12 9 6"></polyline>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        
-        <p class="dashboard-note" data-i18n="dashboard_dica">💡 Dica: Use os filtros interativos para explorar diferentes perspectivas dos dados</p>
-    </div>
-</section>
-<!-- FIM: DASHBOARD -->
+        <section id="dashboard">
+            <div class="container">
+                <h2>
+                    <img src="business-intelligence.png" alt="" class="icone-titulo"> Exemplo de entrega
+                </h2>
+                <p class="dashboard-intro">Um exemplo do tipo de painel que entregamos, construído a partir de uma base de CRM. Explore à vontade.</p>
 
-        <!-- INÍCIO: PREÇOS -->
+                <div class="antes-depois">
+                    <div class="antes-depois-item antes">
+                        <span class="antes-depois-rotulo">Antes</span>
+                        <p>Planilhas exportadas de sistemas diferentes, copiadas e coladas à mão toda semana, com números que não batem.</p>
+                    </div>
+                    <div class="antes-depois-item depois">
+                        <span class="antes-depois-rotulo">Depois</span>
+                        <p>Um painel único, atualizado automaticamente, com filtros para cada gestor encontrar a resposta em segundos.</p>
+                    </div>
+                </div>
+
+                <!-- Placeholder do Dashboard -->
+                <div id="dashboard-placeholder" class="dashboard-container">
+                    <div class="dashboard-loader">
+                        <div class="loader-icon"></div>
+                        <h3>Painel interativo</h3>
+                        <p>Clique no botão abaixo para carregar o painel de exemplo</p>
+                        <button onclick="loadDashboard()" class="cta-button dashboard-load-btn">
+                            <span>Carregar painel</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <p class="dashboard-note">💡 Dica: use os filtros interativos para explorar diferentes perspectivas dos dados</p>
+            </div>
+        </section>
+        <!-- FIM: DASHBOARD -->
+
+        <!-- INÍCIO: OFERTAS -->
+        <!-- Valores: edite PRECOS no início de script.js. Enquanto estiverem vazios, aparece "Sob consulta". -->
         <section id="precos">
             <div class="container">
-                <h2>Nossos Planos</h2>
-                <div class="pricing-grid">
+                <h2>Ofertas com escopo e prazo definidos</h2>
+                <p class="secao-subtitulo escuro">Você sabe o que vai receber, em quanto tempo e quanto vai pagar antes de começar.</p>
+                <div class="pricing-grid ofertas-grid">
                     <div class="pricing-card">
-                        <h3>Básico</h3>
-                        <p class="description">Ideal para empresas que estão começando a entender o valor da análise de dados.</p>
+                        <h3>Diagnóstico de Dados</h3>
+                        <p class="price">Gratuito</p>
+                        <p class="prazo">30 minutos, online</p>
+                        <p class="description">O primeiro passo: entendemos o seu cenário e apontamos onde os dados podem economizar tempo ou dinheiro.</p>
                         <ul class="features-list">
-                            <li data-i18n="plano_basico_analise_exploratoria">Análise Exploratória Mensal</li>
-                            <li data-i18n="plano_basico_dashboards">Dashboards Elaborados e Eficazes</li>
-                            <li data-i18n="plano_basico_relatorio_mensal">Relatório Mensal</li>
+                            <li>Mapeamento das suas fontes de dados</li>
+                            <li>Oportunidades priorizadas</li>
+                            <li>Proposta em até 1 dia útil</li>
                         </ul>
-                        <a href="#contato" class="pricing-button" data-i18n="fale_conosco">Fale Conosco</a>
+                        <a href="https://wa.me/5548988769823?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20o%20diagn%C3%B3stico%20gratuito." class="pricing-button js-cta-diagnostico" data-origem="oferta-diagnostico" target="_blank" rel="noopener noreferrer">Agendar diagnóstico</a>
                     </div>
 
                     <div class="pricing-card featured">
-                        <span class="badge">Oportunidade!!</span>
-                        <h3>Profissional</h3>
-                        <p class="description">Para empresas que buscam insights avançados e dashboards que fogem do genérico.</p>
+                        <span class="badge">Ponto de partida</span>
+                        <h3>Painel Essencial</h3>
+                        <p class="price" data-preco="painel">Sob consulta</p>
+                        <p class="prazo">Prazo típico: 2 a 3 semanas</p>
+                        <p class="description">Um painel de vendas, financeiro ou operação para acompanhar os números que importam, sem planilha manual.</p>
                         <ul class="features-list">
-                            <li data-i18n="plano_profissional_tudo_basico">Tudo do plano Básico</li>
-                            <li data-i18n="plano_profissional_modelegem_automaticacao">Modelagem e Automação</li>
-                            <li data-i18n="plano_profissional_relatorios_qualquer_formato">Relatórios em Qualquer Formato</li>
+                            <li>1 painel em Power BI ou Looker Studio</li>
+                            <li>Conexão com planilhas, ERP ou CRM</li>
+                            <li>Até 2 rodadas de ajustes</li>
+                            <li>Treinamento de 1 hora e documentação</li>
                         </ul>
-                        <a href="#contato" class="pricing-button" data-i18n="fale_conosco">Fale Conosco</a>
+                        <a href="#contato" class="pricing-button" data-necessidade="Painel / dashboard">Quero um painel</a>
                     </div>
 
                     <div class="pricing-card">
-                        <h3>Empresarial</h3>
-                        <p class="description" data-i18n="plano_empresarial_descricao">Solução completa para dados complexos e situações específicas.</p>
+                        <h3>Automação de Relatório</h3>
+                        <p class="price" data-preco="automacao">Sob consulta</p>
+                        <p class="prazo">Prazo típico: 1 a 2 semanas</p>
+                        <p class="description">Aquele relatório que alguém monta toda semana passa a ser gerado sozinho.</p>
                         <ul class="features-list">
-                            <li data-i18n="plano_empresarial_equipe_exclusiva">Equipe Exclusiva</li>
-                            <li data-i18n="plano_empresarial_consultoria_dedicada">Consultoria dedicada</li>
-                            <li data-i18n="plano_empresarial_agenda_prioritaria">Agenda Prioritária</li>
+                            <li>1 rotina manual automatizada</li>
+                            <li>Python, Apps Script ou Power Query</li>
+                            <li>Envio automático por e-mail ou planilha</li>
+                            <li>Documentação do processo</li>
                         </ul>
-                        <a href="#contato" class="pricing-button">Fale Conosco</a>
+                        <a href="#contato" class="pricing-button" data-necessidade="Automação de relatório">Quero automatizar</a>
+                    </div>
+
+                    <div class="pricing-card">
+                        <h3>Acompanhamento Mensal</h3>
+                        <p class="price" data-preco="acompanhamento">Sob consulta</p>
+                        <p class="prazo">Contrato mensal</p>
+                        <p class="description">Para quem já tem painéis e quer mantê-los úteis, corretos e evoluindo.</p>
+                        <ul class="features-list">
+                            <li>Manutenção e atualização dos painéis</li>
+                            <li>Ajustes e novos indicadores</li>
+                            <li>Reunião mensal de análise</li>
+                            <li>Suporte por WhatsApp em horário comercial</li>
+                        </ul>
+                        <a href="#contato" class="pricing-button" data-necessidade="Acompanhamento mensal">Quero acompanhamento</a>
+                    </div>
+                </div>
+
+                <ul class="garantias">
+                    <li><strong>Pagamento em 2 etapas:</strong> 50% no início e 50% na entrega, por Pix ou transferência.</li>
+                    <li><strong>Ajustes incluídos</strong> até você aprovar a entrega, dentro do escopo combinado.</li>
+                    <li><strong>Confidencialidade:</strong> assinamos um acordo (NDA) antes de acessar seus dados.</li>
+                </ul>
+            </div>
+        </section>
+        <!-- FIM: OFERTAS -->
+
+        <!-- INÍCIO: CALCULADORA -->
+        <section id="calculadora">
+            <div class="container">
+                <span class="secao-tag">Calculadora</span>
+                <h2>Quanto custa fazer relatórios à mão?</h2>
+                <p class="secao-subtitulo">Preencha com a realidade da sua empresa e veja quanto tempo e dinheiro vão, todo mês, para copiar, colar e conferir planilhas.</p>
+
+                <div class="calculadora">
+                    <form class="calc-campos" id="calcForm" onsubmit="return false;">
+                        <div class="calc-campo">
+                            <label for="calcHoras">Horas por semana gastas com relatórios manuais</label>
+                            <input type="number" id="calcHoras" min="0" max="80" step="0.5" value="4" inputmode="decimal">
+                        </div>
+                        <div class="calc-campo">
+                            <label for="calcPessoas">Pessoas envolvidas nessa rotina</label>
+                            <input type="number" id="calcPessoas" min="1" max="50" step="1" value="1" inputmode="numeric">
+                        </div>
+                        <div class="calc-campo">
+                            <label for="calcCusto">Custo médio da hora de cada pessoa (R$)</label>
+                            <input type="number" id="calcCusto" min="0" max="1000" step="1" value="40" inputmode="decimal">
+                            <small>Salário + encargos ÷ horas trabalhadas no mês. Na dúvida, use R$ 40.</small>
+                        </div>
+                    </form>
+
+                    <div class="calc-resultado" aria-live="polite">
+                        <div class="calc-numero">
+                            <span class="calc-valor" id="calcHorasMes">17 h</span>
+                            <span class="calc-rotulo">por mês</span>
+                        </div>
+                        <div class="calc-numero">
+                            <span class="calc-valor" id="calcCustoMes">R$ 693</span>
+                            <span class="calc-rotulo">por mês</span>
+                        </div>
+                        <div class="calc-numero destaque">
+                            <span class="calc-valor" id="calcCustoAno">R$ 8.320</span>
+                            <span class="calc-rotulo">por ano</span>
+                        </div>
+                        <p class="calc-nota">Estimativa: horas por semana × pessoas × custo da hora × 52 semanas.</p>
+                        <a href="https://wa.me/5548988769823?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20o%20diagn%C3%B3stico%20gratuito." class="cta-button" id="calcCta" target="_blank" rel="noopener noreferrer">Quero reduzir esse tempo</a>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- FIM: PREÇOS -->
+        <!-- FIM: CALCULADORA -->
 
-        <!-- INÍCIO: SOBRE -->
-<section id="sobre">
-    <div class="container">
-        <div class="about-wrapper">
-            <div class="about-image">
-                <img src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=800&q=80" alt="Profissional analisando dados">
-            </div>
-            
-            <div class="about-content">
-                <span class="about-tag" data-i18n="sobre_tag">Nossa missão</span>
-                <h2 data-i18n="sobre_titulo">A Apolo Analytics</h2>
-                
-                <p data-i18n="sobre_paragrafo_1">
-                    Vivemos em um mundo onde decisões estratégicas precisam ser rápidas e precisas, 
-                    e é aqui que os dados se tornam um recurso inestimável. Mas, para nós, os dados não 
-                    são apenas números em uma planilha. Eles são histórias esperando para ser contadas, 
-                    são insights que podem guiar decisões, são a base para o crescimento sustentável de qualquer empresa.
-                </p>
-                
-                <p data-i18n="sobre_paragrafo_2">
-                    Na Apolo Analytics, acreditamos que enxergar é muito mais do que apenas ver. É compreender 
-                    profundamente, é descobrir o que antes estava oculto, é revelar o verdadeiro potencial 
-                    de um negócio. Nossa missão é simples e poderosa: transformar a forma de enxergar as 
-                    empresas através dos dados.
-                </p>
-                
-                <p data-i18n="sobre_paragrafo_3">
-                    Nosso compromisso vai além de fornecer tecnologia ou consultoria. Estamos comprometidos 
-                    em transformar a maneira como você vê seu negócio. Queremos que você descubra novas 
-                    oportunidades, tome decisões mais informadas e, acima de tudo, enxergue o caminho para 
-                    o crescimento com mais clareza.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- FIM: SOBRE -->
+        <!-- INÍCIO: CLIENTES FUNDADORES -->
+        <!-- Vagas restantes: edite VAGAS_FUNDADORES no início de script.js -->
+        <section id="fundadores">
+            <div class="container">
+                <div class="fundadores-box">
+                    <span class="secao-tag">Programa Clientes Fundadores</span>
+                    <h2>Seja um dos 3 primeiros clientes da Apolo</h2>
+                    <p class="secao-subtitulo">Estamos começando e queremos construir nosso portfólio junto com empresas parceiras. Os 3 primeiros clientes recebem condições especiais em troca de feedback.</p>
 
-        <!-- INÍCIO: DEPOIMENTOS -->
-<section id="depoimentos">
-    <div class="container">
-        <div class="depoimentos-header">
-            <span class="depoimentos-tag" data-i18n="depoimentos_tag">Casos de Sucesso</span>
-            <h2 data-i18n="depoimentos_titulo">Clientes que Transformaram Dados em Resultados</h2>
-            <p class="depoimentos-subtitle" data-i18n="depoimentos_subtitulo">Veja como ajudamos empresas a tomar decisões mais inteligentes</p>
-        </div>
-        
-        <div class="depoimentos-grid">
-            <div class="depoimento-card">
-                <div class="depoimento-rating">
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                </div>
-                <p class="depoimento-texto">
-                    "Excelente trabalho! Transformaram nossos dados em Painéis úteis e valiosos. A clareza nas análises nos permitiu identificar oportunidades que estavam invisíveis."
-                </p>
-                <div class="depoimento-autor">
-                    <div class="autor-avatar">
-                        <span>HT</span>
+                    <div class="fundadores-colunas">
+                        <div>
+                            <h3>Você recebe</h3>
+                            <ul class="lista-check">
+                                <li>30% de desconto no primeiro projeto</li>
+                                <li>Atendimento direto com os dois sócios</li>
+                                <li>Prioridade na agenda</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Em troca, pedimos</h3>
+                            <ul class="lista-check">
+                                <li>Um depoimento ao final do projeto</li>
+                                <li>Autorização para publicar um estudo de caso, sem dados sensíveis</li>
+                                <li>Uso do seu logo no nosso site</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="autor-info">
-                        <span class="autor-nome">Henrique Teodor Lima</span>
-                        <span class="autor-cargo">Gerente de Operações</span>
-                    </div>
-                </div>
-                <div class="depoimento-stats">
-                    <div class="stat">
-                        <span class="stat-valor">35%</span>
-                        <span class="stat-descricao">Aumento em eficiência</span>
-                    </div>
-                </div>
-            </div>
 
-            <div class="depoimento-card featured-depoimento">
-                <div class="depoimento-badge">Destaque</div>
-                <div class="depoimento-rating">
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                </div>
-                <p class="depoimento-texto">
-                    "Profissionais competentes e atenciosos. O suporte durante todo o processo foi excepcional, e os insights gerados mudaram nossa estratégia de negócio."
-                </p>
-                <div class="depoimento-autor">
-                    <div class="autor-avatar">
-                        <span>EN</span>
-                    </div>
-                    <div class="autor-info">
-                        <span class="autor-nome">Eduarda Nogueira</span>
-                        <span class="autor-cargo">Analista Senior de Dados</span>
-                    </div>
-                </div>
-                <div class="depoimento-stats">
-                    <div class="stat">
-                        <span class="stat-valor">50%</span>
-                        <span class="stat-descricao">Redução em tempo de análise</span>
-                    </div>
+                    <p class="fundadores-vagas"><span id="vagasFundadores">3</span> de 3 vagas disponíveis</p>
+                    <a href="https://wa.me/5548988769823?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20tenho%20interesse%20no%20programa%20Clientes%20Fundadores." class="cta-button js-cta-fundadores" target="_blank" rel="noopener noreferrer">Quero uma vaga</a>
                 </div>
             </div>
+        </section>
+        <!-- FIM: CLIENTES FUNDADORES -->
 
-            <div class="depoimento-card">
-                <div class="depoimento-rating">
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
+        <!-- INÍCIO: QUEM SOMOS -->
+        <!-- PREENCHER: nome, experiência e LinkedIn de cada sócio. Para usar foto, troque o <span> das iniciais por <img src="socio1.jpg" alt="Nome"> -->
+        <section id="sobre">
+            <div class="container">
+                <div class="sobre-cabecalho">
+                    <span class="about-tag">Quem somos</span>
+                    <h2>Dois economistas que trabalham com dados todos os dias</h2>
+                    <p>A Apolo Analytics foi fundada por dois estudantes de Economia que já atuam no mercado com análise de dados: painéis, automações e relatórios para a gestão. Unimos a base de estatística e econometria da Economia com a prática de quem entrega BI no dia a dia. Nossa missão é simples: transformar a forma como as empresas enxergam o próprio negócio através dos dados.</p>
                 </div>
-                <p class="depoimento-texto">
-                    "A Apolo Analytics não apenas entregou dashboards, mas nos ensinou a cultura data-driven. Agora tomamos decisões baseadas em fatos, não em achismos."
-                </p>
-                <div class="depoimento-autor">
-                    <div class="autor-avatar">
-                        <span>MS</span>
-                    </div>
-                    <div class="autor-info">
-                        <span class="autor-nome">Marcos Silva</span>
-                        <span class="autor-cargo">CEO, TechStart</span>
-                    </div>
+
+                <div class="socios">
+                    <article class="socio">
+                        <div class="socio-foto"><span>S1</span></div>
+                        <h3 class="preencher">Nome do sócio 1</h3>
+                        <p class="socio-cargo">Sócio · Economia</p>
+                        <ul class="socio-experiencia">
+                            <li class="preencher">Experiência atual: cargo e área (ex.: analista de dados no setor X)</li>
+                            <li class="preencher">Anos de experiência com dados</li>
+                            <li class="preencher">Principais ferramentas</li>
+                        </ul>
+                        <a href="#" class="socio-linkedin preencher" target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn
+                        </a>
+                    </article>
+
+                    <article class="socio">
+                        <div class="socio-foto"><span>S2</span></div>
+                        <h3 class="preencher">Nome do sócio 2</h3>
+                        <p class="socio-cargo">Sócio · Economia</p>
+                        <ul class="socio-experiencia">
+                            <li class="preencher">Experiência atual: cargo e área (ex.: analista de BI no setor Y)</li>
+                            <li class="preencher">Anos de experiência com dados</li>
+                            <li class="preencher">Principais ferramentas</li>
+                        </ul>
+                        <a href="#" class="socio-linkedin preencher" target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn
+                        </a>
+                    </article>
                 </div>
-                <div class="depoimento-stats">
-                    <div class="stat">
-                        <span class="stat-valor">3x</span>
-                        <span class="stat-descricao">ROI em 6 meses</span>
-                    </div>
+
+                <div class="ferramentas">
+                    <span>Power BI</span>
+                    <span>Looker Studio</span>
+                    <span>Excel e Power Query</span>
+                    <span>SQL</span>
+                    <span>Python</span>
+                    <span>Google Apps Script</span>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
-<!-- FIM: DEPOIMENTOS -->
+        </section>
+        <!-- FIM: QUEM SOMOS -->
+
+        <!-- INÍCIO: FAQ -->
+        <section id="faq">
+            <div class="container">
+                <h2>Dúvidas frequentes</h2>
+                <div class="faq-lista">
+                    <details class="faq-item">
+                        <summary>Preciso ter os dados organizados para começar?</summary>
+                        <p>Não. Organizar e integrar os dados costuma ser parte do trabalho. No diagnóstico avaliamos o que você já tem (planilhas, ERP, CRM, sistema de vendas) e dizemos o que dá para fazer com isso.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Meus dados ficam seguros?</summary>
+                        <p>Sim. Assinamos um acordo de confidencialidade (NDA) antes de acessar qualquer informação, usamos só os acessos necessários ao projeto e seguimos a LGPD. Sempre que possível, o trabalho é feito no ambiente da sua própria empresa.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Preciso comprar Power BI ou outra ferramenta?</summary>
+                        <p>Não necessariamente. Indicamos a opção mais econômica para o seu caso. Muitas vezes dá para começar sem custo de licença, com Looker Studio ou Google Sheets.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Quanto custa?</summary>
+                        <p>Cada oferta tem escopo e prazo definidos. O valor final é confirmado na proposta, que enviamos em até 1 dia útil depois do diagnóstico gratuito.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Quanto tempo leva?</summary>
+                        <p>Uma automação de relatório costuma levar de 1 a 2 semanas; um painel, de 2 a 3 semanas. O prazo exato vai na proposta, junto com o escopo.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>E depois da entrega, quem mantém o painel?</summary>
+                        <p>Você recebe documentação e um treinamento para o time usar o painel com autonomia. Se preferir, o Acompanhamento Mensal cuida da manutenção e de novos indicadores.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Vocês emitem nota fiscal?</summary>
+                        <p>Estamos formalizando a empresa. Enquanto isso, atendemos com contrato de prestação de serviços e recibo. Se a sua empresa exige nota fiscal, conte no diagnóstico e combinamos a melhor forma.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Vocês atendem empresas de qualquer cidade?</summary>
+                        <p>Sim. Todo o atendimento é online: reuniões por vídeo e contato por WhatsApp e e-mail.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+        <!-- FIM: FAQ -->
 
         <!-- INÍCIO: CONTATO -->
         <section id="contato">
             <div class="container">
-                <h2>Entre em Contato</h2>
+                <h2>Vamos conversar sobre seus dados</h2>
+                <p class="contato-intro">Respondemos em até 1 dia útil. Prefere falar agora? <a href="https://wa.me/5548988769823?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener noreferrer">Chame no WhatsApp</a>.</p>
                 <form class="contato-form google-form"
                     action="https://script.google.com/macros/s/AKfycbympDInhl0nwYj3VkwR92gF8PuWq6nOq5RtwnSDaz0F1qA26Fbr9soEyx3VJDfhqC_X/exec"
                     method="POST">
 
-                    <div class="form-group">
-                        <label>Nome</label>
-                        <input type="text" name="nome" required />
+                    <div class="form-linha">
+                        <div class="form-group">
+                            <label for="nome">Nome *</label>
+                            <input type="text" id="nome" name="nome" autocomplete="name" required />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="empresa">Empresa</label>
+                            <input type="text" id="empresa" name="empresa" autocomplete="organization" />
+                        </div>
+                    </div>
+
+                    <div class="form-linha">
+                        <div class="form-group">
+                            <label for="email">E-mail *</label>
+                            <input type="email" id="email" name="email" autocomplete="email" required />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="whatsapp">WhatsApp</label>
+                            <input type="tel" id="whatsapp" name="whatsapp" autocomplete="tel" placeholder="(00) 00000-0000" />
+                        </div>
+                    </div>
+
+                    <div class="form-linha">
+                        <div class="form-group">
+                            <label for="segmento">Segmento da empresa</label>
+                            <select id="segmento" name="segmento">
+                                <option value="">Selecione</option>
+                                <option>Varejo ou e-commerce</option>
+                                <option>Serviços</option>
+                                <option>Indústria</option>
+                                <option>Saúde</option>
+                                <option>Educação</option>
+                                <option>Agência ou consultoria</option>
+                                <option>Outro</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="necessidade">O que você precisa?</label>
+                            <select id="necessidade" name="necessidade">
+                                <option value="">Selecione</option>
+                                <option>Painel / dashboard</option>
+                                <option>Automação de relatório</option>
+                                <option>Acompanhamento mensal</option>
+                                <option>Organizar ou integrar dados</option>
+                                <option>Análise pontual</option>
+                                <option>Ainda não sei</option>
+                            </select>
+                        </div>
                     </div>
 
                     <div class="form-group">
-                        <label>E-mail</label>
-                        <input type="email" name="email" required />
+                        <label for="mensagem">Mensagem *</label>
+                        <textarea id="mensagem" name="mensagem" placeholder="Conte rapidamente o que você precisa ou qual tarefa toma tempo do seu time" required></textarea>
                     </div>
 
-                    <div class="form-group">
-                        <label>Empresa</label>
-                        <input type="text" name="empresa" />
-                    </div>
-
-                    <div class="form-group">
-                        <label>Mensagem</label>
-                        <textarea name="mensagem" required></textarea>
-                    </div>
+                    <label class="form-consentimento">
+                        <input type="checkbox" name="consentimento" value="sim" required />
+                        <span>Concordo com o uso destes dados para a Apolo Analytics retornar meu contato, conforme a <a href="privacidade.html">Política de Privacidade</a>.</span>
+                    </label>
 
                     <button type="submit" class="cta-button">
-                        Enviar Mensagem
+                        Enviar mensagem
                     </button>
-
-                    <div class="mensagem-sucesso" style="display:none;">
-                        Mensagem enviada com sucesso!
-                    </div>
                 </form>
 
-                <!-- INÍCIO: Estilo inline (mensagem de sucesso) -->
-                <div id="mensagem-sucesso" style="display:none; color:#ebf1ea; margin-top:20px; font-weight:bold; text-align:center; font-size:larger;">
-                    Obrigado! Sua mensagem foi enviada com sucesso.
-                </div>
-                <!-- FIM: Estilo inline (mensagem de sucesso) -->
+                <div class="form-message" role="status" aria-live="polite" hidden></div>
             </div>
         </section>
         <!-- FIM: CONTATO -->
 
         <!-- INÍCIO: BOTÃO WHATSAPP -->
-        <a href="https://wa.me/5548988769823?text=Olá,%20gostaria%20de%20mais%20informações" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <a href="https://wa.me/5548988769823?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Falar pelo WhatsApp">
             <svg class="whatsapp-icon" viewBox="0 0 32 32">
                 <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 7.933-2.127c2.42 1.37 5.173 2.127 8.067 2.127 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.467c-2.482 0-4.908-0.646-7.07-1.87l-0.507-0.292-5.245 1.408 1.408-5.245-0.292-0.507c-1.224-2.162-1.87-4.588-1.87-7.070 0-7.467 6.533-14 14-14s14 6.533 14 14-6.533 13.576-14 13.576zM21.803 18.997c-0.256-0.128-1.518-0.748-1.753-0.834-0.235-0.085-0.405-0.128-0.575 0.128s-0.661 0.834-0.81 1.005c-0.149 0.171-0.299 0.192-0.555 0.064-0.256-0.128-1.081-0.399-2.059-1.271-0.761-0.679-1.275-1.518-1.424-1.774s-0.016-0.394 0.112-0.522c0.115-0.115 0.256-0.299 0.384-0.448s0.171-0.256 0.256-0.427c0.085-0.171 0.043-0.320-0.021-0.448s-0.575-1.387-0.788-1.899c-0.208-0.498-0.419-0.43-0.575-0.438-0.149-0.008-0.320-0.010-0.491-0.010s-0.448 0.064-0.683 0.320c-0.235 0.256-0.896 0.875-0.896 2.133s0.917 2.475 1.045 2.645c0.128 0.171 1.805 2.755 4.373 3.863 0.611 0.264 1.088 0.422 1.459 0.54 0.613 0.195 1.171 0.168 1.613 0.102 0.492-0.074 1.518-0.621 1.733-1.22 0.214-0.6 0.214-1.115 0.149-1.22-0.064-0.106-0.235-0.171-0.491-0.299z"/>
             </svg>
         </a>
         <!-- FIM: BOTÃO WHATSAPP -->
 
-    <!-- INÍCIO: RODAPÉ -->
+        <!-- INÍCIO: RODAPÉ -->
         <footer>
             <div class="social-links">
                 <a href="https://www.instagram.com/apoloanalytics/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
@@ -467,18 +693,22 @@
                     </svg>
                 </a>
             </div>
-            <p>&copy; 2026 Apolo Análise de Dados. Todos os direitos reservados.</p>
+            <p class="footer-contato">
+                <a href="mailto:contato@apoloanalytics.com.br">contato@apoloanalytics.com.br</a> ·
+                <a href="https://wa.me/5548988769823?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener noreferrer">WhatsApp (48) 98876-9823</a> ·
+                Atendimento online para todo o Brasil
+            </p>
+            <p>&copy; 2026 Apolo Análise de Dados. Todos os direitos reservados. · <a href="privacidade.html">Política de Privacidade</a> · <a href="#" class="js-abrir-cookies">Preferências de cookies</a></p>
         </footer>
         <!-- FIM: RODAPÉ -->
 
         <!-- INÍCIO: SCRIPTS -->
-        <script src="https://unpkg.com/i18next/dist/umd/i18next.min.js"></script>
-        <script src="https://unpkg.com/loc-i18next/dist/umd/loc-i18next.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/i18next@26.4.2/dist/umd/i18next.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/loc-i18next@0.1.6/dist/umd/loc-i18next.min.js"></script>
 
+        <script src="analytics.js"></script>
+        <script src="form-contato.js"></script>
         <script src="script.js"></script>
         <!-- FIM: SCRIPTS -->
     </body>
 </html>
-
-
-
