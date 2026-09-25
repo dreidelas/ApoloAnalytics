@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://apoloanalytics.com.br/sitemap.xml

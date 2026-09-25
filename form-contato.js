@@ -36,6 +36,13 @@ document.querySelectorAll('.google-form').forEach((formulario) => {
         })
             .then(() => {
                 formulario.hidden = true;
+                if (window.rastrearEvento) {
+                    const necessidade = formulario.querySelector('[name="necessidade"]');
+                    window.rastrearEvento('generate_lead', {
+                        origem: formulario.closest('section') ? formulario.closest('section').id || 'blog' : 'site',
+                        necessidade: necessidade ? necessidade.value : '',
+                    });
+                }
                 mostrarMensagemFormulario(
                     mensagem,
                     'success',

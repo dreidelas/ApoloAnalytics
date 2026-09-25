@@ -1,5 +1,5 @@
 // ========================================
-// BLOG APOLO ANALYTICS - JavaScript com Modal
+// BLOG APOLO ANALYTICS - Lista de artigos
 // ========================================
 
 
@@ -27,9 +27,10 @@ function renderPosts(postsToRender) {
     postsGrid.style.display = 'grid';
     noResults.style.display = 'none';
 
+    // Cada card leva à página própria do artigo (gerada por scripts/gerar-blog.mjs)
     postsGrid.innerHTML = postsToRender.map(post => `
-        <article class="post-card" onclick="openPostModal(${post.id})">
-            <img src="${post.image}" alt="${post.title}" class="post-image">
+        <a class="post-card" href="${post.slug}/">
+            <img src="${post.image}" alt="" class="post-image" loading="lazy">
             <div class="post-content">
                 <div class="post-meta">
                     <span class="post-category">${post.categoryName}</span>
@@ -39,63 +40,11 @@ function renderPosts(postsToRender) {
                 <p class="post-excerpt">${post.excerpt}</p>
                 <div class="post-footer">
                     <span class="read-time">⏱️ ${post.readTime} de leitura</span>
-                    <a href="#" class="read-more" onclick="event.stopPropagation(); openPostModal(${post.id})">
-                        Ler mais →
-                    </a>
+                    <span class="read-more">Ler mais →</span>
                 </div>
             </div>
-        </article>
+        </a>
     `).join('');
-}
-
-// ========== FUNÇÃO: ABRIR MODAL DO POST ==========
-function openPostModal(postId) {
-    const post = posts.find(p => p.id === postId);
-    if (!post) return;
-
-    // Cria o modal se não existir
-    let modal = document.getElementById('postModal');
-    if (!modal) {
-        modal = document.createElement('div');
-        modal.id = 'postModal';
-        modal.className = 'post-modal';
-        document.body.appendChild(modal);
-    }
-
-    // Preenche o conteúdo do modal
-    modal.innerHTML = `
-        <div class="modal-content">
-            <button class="modal-close" onclick="closePostModal()">&times;</button>
-            <div class="modal-header">
-                <img src="${post.image}" alt="${post.title}" class="modal-image">
-                <div class="modal-meta">
-                    <span class="post-category">${post.categoryName}</span>
-                    <span>${post.date}</span>
-                    <span>⏱️ ${post.readTime} de leitura</span>
-                </div>
-                <h1>${post.title}</h1>
-            </div>
-            <div class="modal-body">
-                ${post.content}
-            </div>
-            <div class="modal-footer">
-                <button onclick="closePostModal()" class="btn-voltar">← Voltar ao Blog</button>
-            </div>
-        </div>
-    `;
-
-    // Exibe o modal
-    modal.style.display = 'flex';
-    document.body.style.overflow = 'hidden';
-}
-
-// ========== FUNÇÃO: FECHAR MODAL ==========
-function closePostModal() {
-    const modal = document.getElementById('postModal');
-    if (modal) {
-        modal.style.display = 'none';
-        document.body.style.overflow = 'auto';
-    }
 }
 
 // ========== FUNÇÃO: FILTRAR POSTS ==========

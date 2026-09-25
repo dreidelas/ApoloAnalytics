@@ -19,6 +19,27 @@
     <link rel="icon" type="image/x-icon" href="../favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="blog-main.css">
+
+    <!-- INÍCIO: Google Tag (Analytics) com Consent Mode -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', {
+            analytics_storage: 'denied',
+            ad_storage: 'denied',
+            ad_user_data: 'denied',
+            ad_personalization: 'denied'
+        });
+        try {
+            if (localStorage.getItem('apoloCookies') === 'aceito') {
+                gtag('consent', 'update', { analytics_storage: 'granted' });
+            }
+        } catch (e) {}
+        gtag('js', new Date());
+        gtag('config', 'G-12BGLWKG5G');
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-12BGLWKG5G"></script>
+    <!-- FIM: Google Tag (Analytics) -->
 </head>
 <body>
     <!-- HEADER -->
@@ -36,9 +57,9 @@
 
             <ul class="nav-links" id="navLinks">
                 <li><a href="../index.html">Início</a></li>
-                <li><a href="../index.html#servicos">Serviços</a></li>
-                <li><a href="../index.html#precos">Preços</a></li>
-                <li><a href="index.html" class="active">Blog</a></li>
+                <li><a href="../index.html#precos">Ofertas</a></li>
+                <li><a href="../index.html#sobre">Quem somos</a></li>
+                <li><a href="./" class="active">Blog</a></li>
                 <li><a href="../index.html#contato">Contato</a></li>
             </ul>
         </nav>
@@ -77,7 +98,68 @@
     <section class="blog-content">
         <div class="container">
             <div class="posts-grid" id="postsGrid">
-                <!-- Posts gerados dinamicamente -->
+                <!-- POSTS:INICIO (gerado por scripts/gerar-blog.mjs; o blog.js redesenha a lista com filtros) -->
+                <a class="post-card" href="data-driven-no-judiciario/">
+                    <img src="img/capa-judiciario.jpg" alt="" class="post-image" loading="lazy">
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-category">Business Intelligence &amp; Data-Driven</span>
+                            <span>23 Jan, 2026</span>
+                        </div>
+                        <h3>Não acredita no poder dos Dados?</h3>
+                        <p class="post-excerpt">O judiciário dá o exemplo</p>
+                        <div class="post-footer">
+                            <span class="read-time">⏱️ 8 min de leitura</span>
+                            <span class="read-more">Ler mais →</span>
+                        </div>
+                    </div>
+                </a>
+                <a class="post-card" href="power-bi-vs-looker-studio/">
+                    <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800" alt="" class="post-image" loading="lazy">
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-category">Tutoriais</span>
+                            <span>5 Jan, 2026</span>
+                        </div>
+                        <h3>Power BI vs Looker Studio: Qual Escolher?</h3>
+                        <p class="post-excerpt">Comparativo detalhado entre as duas principais ferramentas de BI do mercado, com casos de uso e recomendações práticas.</p>
+                        <div class="post-footer">
+                            <span class="read-time">⏱️ 10 min de leitura</span>
+                            <span class="read-more">Ler mais →</span>
+                        </div>
+                    </div>
+                </a>
+                <a class="post-card" href="bi-e-ia-no-varejo/">
+                    <img src="img/capa-bi-ia-varejo.jpg" alt="" class="post-image" loading="lazy">
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-category">Business Intelligence</span>
+                            <span>29 Jan, 2026</span>
+                        </div>
+                        <h3>BI e IA no Varejo</h3>
+                        <p class="post-excerpt">Entenda como o setor esta lidando com essas novas ferramentas</p>
+                        <div class="post-footer">
+                            <span class="read-time">⏱️ 7 min de leitura</span>
+                            <span class="read-more">Ler mais →</span>
+                        </div>
+                    </div>
+                </a>
+                <a class="post-card" href="ia-na-criacao-de-relatorios/">
+                    <img src="img/capa-ia-relatorios.jpg" alt="" class="post-image" loading="lazy">
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-category">Análise de Dados</span>
+                            <span>06 Fev, 2026</span>
+                        </div>
+                        <h3>E se a Inteligência Artificial produzir relatórios dos dados da sua empresa</h3>
+                        <p class="post-excerpt">É possível deixar essa função, de criar relatórios, para a IA?</p>
+                        <div class="post-footer">
+                            <span class="read-time">⏱️ 7 min de leitura</span>
+                            <span class="read-more">Ler mais →</span>
+                        </div>
+                    </div>
+                </a>
+                <!-- POSTS:FIM -->
             </div>
             
             <div class="no-results" id="noResults" style="display: none;">
@@ -92,7 +174,7 @@
     <div class="container">
         <div class="contato-content">
             <h2>Fale Conosco</h2>
-            <p>Preencha o formulário abaixo e entraremos em contato</p>
+            <p>Respondemos em até 1 dia útil. Se preferir, agende um <a href="https://wa.me/5548988769823?text=Ol%C3%A1!%20Vim%20pelo%20blog%20e%20gostaria%20de%20agendar%20o%20diagn%C3%B3stico%20gratuito." class="js-cta-diagnostico" data-origem="blog" target="_blank" rel="noopener noreferrer">diagnóstico gratuito</a> pelo WhatsApp.</p>
                 <form class="contato-form google-form"
                     action="https://script.google.com/macros/s/AKfycbympDInhl0nwYj3VkwR92gF8PuWq6nOq5RtwnSDaz0F1qA26Fbr9soEyx3VJDfhqC_X/exec"
                     method="POST">
@@ -116,6 +198,11 @@
                         <label for="mensagem">Mensagem</label>
                         <textarea id="mensagem" name="mensagem" required></textarea>
                     </div>
+
+                    <label class="form-consentimento">
+                        <input type="checkbox" name="consentimento" value="sim" required />
+                        <span>Concordo com o uso destes dados para a Apolo Analytics retornar meu contato, conforme a <a href="../privacidade.html">Política de Privacidade</a>.</span>
+                    </label>
 
                     <button type="submit" class="cta-button">
                         Enviar Mensagem
@@ -141,7 +228,7 @@
                 </svg>
             </a>
         </div>
-        <p>&copy; 2026 Apolo Análise de Dados. Todos os direitos reservados. | contato@apoloanalytics.com.br | (48) 988769823</p>
+        <p>&copy; 2026 Apolo Análise de Dados. Todos os direitos reservados. | <a href="mailto:contato@apoloanalytics.com.br">contato@apoloanalytics.com.br</a> | (48) 98876-9823 | <a href="../privacidade.html">Política de Privacidade</a> | <a href="#" class="js-abrir-cookies">Preferências de cookies</a></p>
     </footer>
 
     <a href="https://wa.me/5548988769823?text=Olá,%20vim%20pelo%20blog%20e%20gostaria%20de%20mais%20informações" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
@@ -153,6 +240,7 @@
     <script src="posts-data.js"></script>
     <script src="blog.js"></script>
     <script src="../form-contato.js"></script>
+    <script src="../analytics.js" data-raiz="../"></script>
 </body>
 </html>
 

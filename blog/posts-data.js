@@ -2,7 +2,9 @@
 // ARTIGOS DO BLOG - APOLO ANALYTICS
 // ========================================
 // Este arquivo contém todos os artigos do blog
-// Para adicionar um novo artigo, copie o template abaixo e preencha os campos
+// Para adicionar um novo artigo, copie o template abaixo e preencha os campos.
+// Depois rode, na raiz do projeto:  node scripts/gerar-blog.mjs
+// Isso cria a página do artigo em blog/<slug>/index.html e atualiza o sitemap.xml
 
 const posts = [
     {
@@ -13,7 +15,7 @@ const posts = [
         categoryName: "Business Intelligence & Data-Driven",
         date: "23 Jan, 2026",
         readTime: "8 min",
-        slug: "Data-Driven e Judiciário",
+        slug: "data-driven-no-judiciario",
         image: "img/capa-judiciario.jpg",
         content: `
             <h2>Introdução</h2>
@@ -44,7 +46,7 @@ const posts = [
         categoryName: "Tutoriais",
         date: "5 Jan, 2026",
         readTime: "10 min",
-        slug: "power-bi-vs-looker",
+        slug: "power-bi-vs-looker-studio",
         image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800",
         content: `
             <h2>Comparação completa</h2>
@@ -81,7 +83,7 @@ const posts = [
     categoryName: "Business Intelligence", // Nome completo da categoria
     date: "29 Jan, 2026", // Exemplo: "15 Jan, 2026"
     readTime: "7 min", // Tempo estimado de leitura
-    slug: "BI e IA no Varejo", // URL amigável
+    slug: "bi-e-ia-no-varejo", // URL amigável
     image: "img/capa-bi-ia-varejo.jpg", // URL da imagem
     content: `
         <h2>No varejo global, adiar decisões já custa mais caro do que investir em tecnologia</h2>
@@ -118,7 +120,7 @@ const posts = [
     categoryName: "Análise de Dados", // Nome completo da categoria
     date: "06 Fev, 2026", // Exemplo: "15 Jan, 2026"
     readTime: "7 min", // Tempo estimado de leitura
-    slug: "Dados e IA", // URL amigável
+    slug: "ia-na-criacao-de-relatorios", // URL amigável
     image: "img/capa-ia-relatorios.jpg", // URL da imagem
     content: `
         <h2>É possível deixar essa função, de criar relatórios, para a IA?</h2>
@@ -153,7 +155,7 @@ const posts = [
     categoryName: "Business Intelligence", // Nome completo da categoria
     date: "DD Mmm, YYYY", // Exemplo: "15 Jan, 2026"
     readTime: "X min", // Tempo estimado de leitura
-    slug: "titulo-do-artigo-sem-espacos", // URL amigável
+    slug: "titulo-do-artigo-sem-espacos", // URL amigável: minúsculas, sem acentos, com hífens
     image: "https://images.unsplash.com/photo-XXXXXX?w=800", // URL da imagem
     content: `
         <h2>Título da Seção</h2>

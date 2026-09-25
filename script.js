@@ -1,3 +1,15 @@
+// ========== CONFIGURAÇÃO COMERCIAL (edite aqui) ==========
+// Preço "a partir de" de cada oferta. Deixe null para mostrar "Sob consulta".
+// Exemplo: painel: 'R$ 1.500'
+const PRECOS = {
+    painel: null,
+    automacao: null,
+    acompanhamento: null, // valor mensal; o site acrescenta "/mês"
+};
+
+// Vagas restantes no programa Clientes Fundadores (0 esconde a seção)
+const VAGAS_FUNDADORES = 3;
+
 // ========== CONFIGURAÇÃO DE TRADUÇÃO (i18next) ==========
 const resources = {
     "pt-BR": {
@@ -191,8 +203,9 @@ const navLinksAnchor = document.querySelectorAll('a[href^="#"]');
 
 navLinksAnchor.forEach((anchor) => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault();
         const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        e.preventDefault();
         const target = document.querySelector(targetId);
 
         if (target) {
@@ -205,6 +218,59 @@ navLinksAnchor.forEach((anchor) => {
 });
 
 // Formulário de contato: ver form-contato.js
+
+// ========== OFERTAS: PREÇOS ==========
+document.querySelectorAll('[data-preco]').forEach((elemento) => {
+    const valor = PRECOS[elemento.dataset.preco];
+    if (!valor) return;
+    const sufixo = elemento.dataset.preco === 'acompanhamento' ? '<span>/mês</span>' : '';
+    elemento.innerHTML = `<span>a partir de</span> ${valor}${sufixo}`;
+});
+
+// Botões das ofertas já deixam a necessidade selecionada no formulário
+document.querySelectorAll('[data-necessidade]').forEach((botao) => {
+    botao.addEventListener('click', () => {
+        const campo = document.getElementById('necessidade');
+        if (campo) campo.value = botao.dataset.necessidade;
+    });
+});
+
+// ========== CLIENTES FUNDADORES: VAGAS ==========
+const secaoFundadores = document.getElementById('fundadores');
+if (secaoFundadores) {
+    if (VAGAS_FUNDADORES <= 0) {
+        secaoFundadores.hidden = true;
+    } else {
+        document.getElementById('vagasFundadores').textContent = VAGAS_FUNDADORES;
+    }
+}
+
+// ========== CALCULADORA DE RELATÓRIOS MANUAIS ==========
+const calcForm = document.getElementById('calcForm');
+if (calcForm) {
+    const moeda = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL', maximumFractionDigits: 0 });
+    const numero = (id) => Math.max(0, parseFloat(document.getElementById(id).value.replace(',', '.')) || 0);
+    const calcCta = document.getElementById('calcCta');
+
+    const atualizarCalculadora = () => {
+        const horasSemana = numero('calcHoras') * numero('calcPessoas');
+        const custoHora = numero('calcCusto');
+        const horasMes = Math.round(horasSemana * 52 / 12);
+        const custoMes = horasSemana * custoHora * 52 / 12;
+        const custoAno = horasSemana * custoHora * 52;
+
+        document.getElementById('calcHorasMes').textContent = `${horasMes.toLocaleString('pt-BR')} h`;
+        document.getElementById('calcCustoMes').textContent = moeda.format(custoMes);
+        document.getElementById('calcCustoAno').textContent = moeda.format(custoAno);
+
+        const mensagem = `Olá! Usei a calculadora do site: gastamos cerca de ${horasMes} horas por mês ` +
+            `com relatórios manuais (${moeda.format(custoAno)} por ano). Quero entender como reduzir isso.`;
+        calcCta.href = `https://wa.me/5548988769823?text=${encodeURIComponent(mensagem)}`;
+    };
+
+    calcForm.addEventListener('input', atualizarCalculadora);
+    atualizarCalculadora();
+}
 
 // ========================================
 // LAZY LOAD MANUAL DO DASHBOARD
